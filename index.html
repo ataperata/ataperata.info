@@ -3,1016 +3,686 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ata Perata - Elite Quality Systems Leader</title>
-    <link rel="icon" type="image/png" href="favicon.png">
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <title>AtaBot - AI That Actually Gets It | Ata Perata</title>
+    <meta name="description" content="Meet AtaBot, the AI assistant with personality. Advanced AI capabilities with witty conversation, code execution, and real-time problem solving.">
+    
+    <!-- Preload Critical Resources -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" as="style">
+    <link rel="preload" href="picture_3.jpg" as="image">
+    <link rel="preload" href="css/styles.css" as="style">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- External Libraries -->
+    <script src="https://unpkg.com/three@0.158.0/build/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.js"></script>
+    <script src="https://unpkg.com/prismjs@1.29.0/components/prism-core.min.js"></script>
+    <script src="https://unpkg.com/prismjs@1.29.0/components/prism-python.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/prismjs@1.29.0/themes/prism-tomorrow.css">
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="css/styles.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🤖</text></svg>">
 </head>
 <body>
-    <!-- Loading Screen -->
+    <!-- Full-Screen Loading Page -->
     <div id="loading-screen" class="loading-screen">
-        <div class="loading-content">
+        <div class="loading-container">
             <div class="loading-logo">
-                <div class="ap-logo">
-                    <span class="letter-a">A</span>
-                    <span class="letter-p">P</span>
-                    <div class="checkmark">✓</div>
-                </div>
+                <div class="logo-icon">🤖</div>
+                <div class="logo-text">AtaBot</div>
             </div>
-            <div class="loading-text">Loading Excellence...</div>
-            <div class="loading-bar">
-                <div class="loading-progress"></div>
+            
+            <div class="loading-progress-container">
+                <div class="loading-text" id="loading-text">Initializing AI systems...</div>
+                <div class="loading-bar">
+                    <div class="loading-progress" id="loading-progress"></div>
+                </div>
+                <div class="loading-percentage" id="loading-percentage">0%</div>
+            </div>
+            
+            <div class="loading-features">
+                <div class="feature-item" data-feature="neural">🧠 Neural Networks</div>
+                <div class="feature-item" data-feature="python">🐍 Python Engine</div>
+                <div class="feature-item" data-feature="chat">💬 Chat System</div>
+                <div class="feature-item" data-feature="analytics">📊 Analytics</div>
             </div>
         </div>
+        
+        <div class="loading-particles">
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+        </div>
     </div>
-
     <!-- Navigation -->
-    <nav class="navbar" id="navbar">
-        <div class="nav-container">
+    <nav class="nav-container">
+        <div class="nav-content">
             <div class="nav-logo">
-                <div class="ap-logo-nav">
-                    <span class="letter-a">A</span>
-                    <span class="letter-p">P</span>
-                    <div class="checkmark">✓</div>
-                </div>
-                <span class="logo-text">Ata Perata</span>
+                <span class="logo-icon">🤖</span>
+                <span class="logo-text">AtaBot</span>
             </div>
-            <div class="nav-menu" id="nav-menu">
-                <a href="#home" class="nav-link">Home</a>
-                <a href="#about" class="nav-link">About</a>
-                <a href="#skills" class="nav-link">Skills</a>
-                <a href="#experience" class="nav-link">Experience</a>
-                <a href="#achievements" class="nav-link">Achievements</a>
-                <a href="#news" class="nav-link">Industry News</a>
-                <a href="#contact" class="nav-link">Contact</a>
-                <a href="resume_enhanced_hcv.pdf" target="_blank" class="nav-link nav-resume">
-                    <i class="fas fa-download"></i>
-                    Resume PDF
+            <div class="nav-links">
+                <a href="#demos" class="nav-link">Demos</a>
+                <a href="#capabilities" class="nav-link">Capabilities</a>
+                <a href="#news" class="nav-link">AI News</a>
+                <a href="#chat" class="nav-link">Chat</a>
+            </div>
+            <div class="nav-social">
+                <a href="https://www.linkedin.com/in/ataperata/" target="_blank" class="social-link" title="LinkedIn">
+                    <svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
                 </a>
-            </div>
-            <div class="nav-toggle" id="nav-toggle">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
+                <a href="https://ataperata.github.io/" target="_blank" class="social-link" title="GitHub">
+                    <svg viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                </a>
+                <a href="https://ataperata.info" target="_blank" class="social-link" title="Portfolio">
+                    <svg viewBox="0 0 24 24"><path d="M12 0L1.5 6v12L12 24l10.5-6V6L12 0zm7.5 16.5L12 21l-7.5-4.5v-9L12 3l7.5 4.5v9z"/></svg>
+                </a>
             </div>
         </div>
     </nav>
 
+    <!-- 3D Background Canvas -->
+    <canvas id="neural-background"></canvas>
+
     <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-background">
-            <div class="hero-particles"></div>
-            <div class="hero-gradient"></div>
-        </div>
+    <section id="hero" class="hero-section">
         <div class="hero-container">
-            <div class="hero-content" data-aos="fade-up" data-aos-duration="1000">
-                <div class="hero-text">
+            <div class="hero-content">
+                <div class="hero-image-container">
+                    <img src="picture_3.jpg" alt="Ata Perata - AI Enthusiast" class="hero-image" loading="eager" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAwIiBoZWlnaHQ9IjMwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjMmQzNzQ4Ii8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSI0MCIgZmlsbD0iI2ZmZiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iPvCfpJY8L3RleHQ+PC9zdmc+'">
                     <div class="hero-badge">
-                        <i class="fas fa-medal"></i>
-                        <span>24+ Years Excellence</span>
+                        <span class="badge-icon">🚀</span>
+                        <span class="badge-text">AI Expert</span>
                     </div>
-                    <h1 class="hero-title">
-                        <span class="hero-name">Ata Perata</span>
-                        <span class="hero-subtitle">
-                            <span id="typed-text"></span>
-                        </span>
-                    </h1>
-                    <p class="hero-description">
-                        Quality Systems Leader learning to transform complex regulations into streamlined solutions. 
-                        From Naval Aviation precision to Medical Device innovation where <strong>"it depends"</strong> isn't an acceptable answer and <strong>"we've always done it that way"</strong> goes to die. Developing skills in 
-                        <strong>ISO 13485, FDA QSR to QMSR transition</strong>, and <strong>the ancient art of making auditors smile instead of reaching for their red pens</strong>.
+                </div>
+                
+                <h1 class="hero-title">
+                    Meet <span class="gradient-text">Ata</span>: AI That Actually Gets It
+                </h1>
+                
+                <div class="hero-subtitle-container">
+                    <p class="hero-subtitle" id="typing-subtitle">
+                        Where cutting-edge AI meets suspiciously human-like wit
                     </p>
-                    <div class="hero-stats">
-                        <div class="stat-item" data-aos="zoom-in" data-aos-delay="200">
-                            <div class="stat-number" data-count="24">0</div>
-                            <div class="stat-label">Years Experience</div>
-                        </div>
-                        <div class="stat-item" data-aos="zoom-in" data-aos-delay="400">
-                            <div class="stat-number" data-count="40">0</div>
-                            <div class="stat-label">Certifications</div>
-                        </div>
-                        <div class="stat-item" data-aos="zoom-in" data-aos-delay="600">
-                            <div class="stat-number" data-count="15">0</div>
-                            <div class="stat-label">% Improvement</div>
-                        </div>
-                        <div class="stat-item" data-aos="zoom-in" data-aos-delay="800">
-                            <div class="stat-number-large">$750M+</div>
-                            <div class="stat-label">Assets Managed Safely</div>
-                        </div>
-                    </div>
-                    <div class="hero-buttons">
-                        <a href="#about" class="btn btn-primary">
-                            <span>Discover My Impact</span>
-                            <i class="fas fa-arrow-right"></i>
-                        </a>
-                        <a href="#contact" class="btn btn-secondary">
-                            <i class="fas fa-calendar-alt"></i>
-                            <span>Schedule a Call</span>
-                        </a>
-                    </div>
                 </div>
-                <div class="hero-visual" data-aos="fade-left" data-aos-delay="800">
-                    <div class="hero-image-container">
-                        <div class="hero-image-frame">
-                            <img src="https://page.gensparksite.com/v1/base64_upload/8ab630089d55dbd9a3c718e44ca0c89d" alt="Ata Perata - Quality Systems Leader" class="hero-image">
-                            <div class="image-overlay"></div>
-                        </div>
-                        <div class="floating-elements">
-                            <div class="floating-icon" data-aos="zoom-in" data-aos-delay="1000">
-                                <i class="fas fa-anchor"></i>
-                                <span>Naval Aviation</span>
-                            </div>
-                            <div class="floating-icon" data-aos="zoom-in" data-aos-delay="1200">
-                                <i class="fas fa-users-cog"></i>
-                                <span>Process Improvement</span>
-                            </div>
-                            <div class="floating-icon" data-aos="zoom-in" data-aos-delay="1400">
-                                <i class="fas fa-graduation-cap"></i>
-                                <span>Continuous Learning</span>
-                            </div>
-                        </div>
-                    </div>
+                
+                <div class="hero-cta">
+                    <button class="btn btn-primary" id="start-chat-btn">
+                        <span class="btn-text">Start Chatting</span>
+                        <div class="btn-glow"></div>
+                    </button>
+                    <button class="btn btn-secondary" id="see-action-btn">
+                        <span class="btn-text">See It In Action</span>
+                        <div class="btn-glow"></div>
+                    </button>
+                </div>
+            </div>
+            
+            <div class="scroll-indicator">
+                <div class="scroll-arrow">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M7.41 8.84L12 13.42l4.59-4.58L18 10.25l-6 6-6-6z"/>
+                    </svg>
                 </div>
             </div>
         </div>
     </section>
 
-
-
-    <!-- About Section -->
-    <section id="about" class="about">
+    <!-- Image Gallery Section -->
+    <section id="gallery" class="gallery-section">
         <div class="container">
-            <div class="section-header" data-aos="fade-up">
-                <h2 class="section-title">The Strategic Advantage</h2>
-                <div class="section-line"></div>
-                <p class="section-subtitle">Where Aerospace Precision Meets Healthcare Innovation</p>
-            </div>
-            <div class="about-content">
-                <div class="about-text" data-aos="fade-up" data-aos-delay="200">
-                    <div class="about-highlight">
-                        <div class="highlight-icon">
-                            <i class="fas fa-rocket"></i>
+            <h2 class="section-title">This Is Ata</h2>
+            <div class="gallery-carousel" id="image-carousel">
+                <div class="carousel-container">
+                    <div class="carousel-track" id="carousel-track">
+                        <div class="carousel-slide active">
+                            <img src="picture_1.jpg" alt="Ata - Professional Shot" loading="lazy" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjQwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZGVmcz48bGluZWFyR3JhZGllbnQgaWQ9ImciIHgxPSIwJSIgeTE9IjAlIiB4Mj0iMTAwJSIgeTI9IjEwMCUiPjxzdG9wIG9mZnNldD0iMCUiIHN0eWxlPSJzdG9wLWNvbG9yOiMxZDRlZDg7Ii8+PHN0b3Agb2Zmc2V0PSI1MCUiIHN0eWxlPSJzdG9wLWNvbG9yOiNkYzI2MjY7Ii8+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdHlsZT0ic3RvcC1jb2xvcjojZmJiZjI0OyIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZykiLz48Y2lyY2xlIGN4PSIyMDAiIGN5PSIxNTAiIHI9IjgwIiBmaWxsPSIjMmQzNzQ4IiBvcGFjaXR5PSIwLjgiLz48dGV4dCB4PSIyMDAiIHk9IjE2MCIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjQ4IiBmaWxsPSIjZmZmIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj7wn6SWPC90ZXh0Pjx0ZXh0IHg9IjIwMCIgeT0iMzAwIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMjAiIGZpbGw9IiNmZmYiIHRleHQtYW5jaG9yPSJtaWRkbGUiPkF0YSBQZXJHDGE8L3RleHQ+PC9zdmc+'">
                         </div>
-                        <div class="highlight-content">
-                            <h3>From 30,000 Feet to Operating Rooms</h3>
-                            <p>24 years in Naval Aviation taught me that "good enough" kills. Now I bring that zero compromise mindset to medical devices, where precision isn't just professional—it's personal.</p>
+                        <div class="carousel-slide">
+                            <img src="picture_2.jpg" alt="Ata - Creative Angle" loading="lazy" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjQwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZGVmcz48bGluZWFyR3JhZGllbnQgaWQ9ImciIHgxPSIwJSIgeTE9IjAlIiB4Mj0iMTAwJSIgeTI9IjEwMCUiPjxzdG9wIG9mZnNldD0iMCUiIHN0eWxlPSJzdG9wLWNvbG9yOiNkYzI2MjY7Ii8+PHN0b3Agb2Zmc2V0PSI1MCUiIHN0eWxlPSJzdG9wLWNvbG9yOiNmYmJmMjQ7Ii8+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdHlsZT0ic3RvcC1jb2xvcjojMWQ0ZWQ4OyIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZykiLz48Y2lyY2xlIGN4PSIyMDAiIGN5PSIxNTAiIHI9IjgwIiBmaWxsPSIjMmQzNzQ4IiBvcGFjaXR5PSIwLjgiLz48dGV4dCB4PSIyMDAiIHk9IjE2MCIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjQ4IiBmaWxsPSIjZmZmIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj7wn6SWPC90ZXh0Pjx0ZXh0IHg9IjIwMCIgeT0iMzAwIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMjAiIGZpbGw9IiNmZmYiIHRleHQtYW5jaG9yPSJtaWRkbGUiPkF0YSBQZXJHDGE8L3RleHQ+PC9zdmc+'">
                         </div>
-                    </div>
-                    
-                    <div class="value-propositions">
-                        <div class="value-prop" data-aos="slide-right" data-aos-delay="300">
-                            <div class="prop-icon">
-                                <i class="fas fa-language"></i>
-                            </div>
-                            <div class="prop-content">
-                                <h4>I Speak Three Languages Fluently</h4>
-                                <p><strong>Engineer:</strong> "Let's optimize the process architecture"<br>
-                                <strong>Auditor:</strong> "Show me the traceability matrix"<br>
-                                <strong>Executive:</strong> "This saves 15% on audit preparation time"</p>
-                            </div>
+                        <div class="carousel-slide">
+                            <img src="picture_3.jpg" alt="Ata - Main Portrait" loading="lazy" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjQwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZGVmcz48bGluZWFyR3JhZGllbnQgaWQ9ImciIHgxPSIwJSIgeTE9IjAlIiB4Mj0iMTAwJSIgeTI9IjEwMCUiPjxzdG9wIG9mZnNldD0iMCUiIHN0eWxlPSJzdG9wLWNvbG9yOiNmYmJmMjQ7Ii8+PHN0b3Agb2Zmc2V0PSI1MCUiIHN0eWxlPSJzdG9wLWNvbG9yOiMxZDRlZDg7Ii8+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdHlsZT0ic3RvcC1jb2xvcjojZGMyNjI2OyIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZykiLz48Y2lyY2xlIGN4PSIyMDAiIGN5PSIxNTAiIHI9IjgwIiBmaWxsPSIjMmQzNzQ4IiBvcGFjaXR5PSIwLjgiLz48dGV4dCB4PSIyMDAiIHk9IjE2MCIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjQ4IiBmaWxsPSIjZmZmIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj7wn6SWPC90ZXh0Pjx0ZXh0IHg9IjIwMCIgeT0iMzAwIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMjAiIGZpbGw9IiNmZmYiIHRleHQtYW5jaG9yPSJtaWRkbGUiPkF0YSBQZXJHDEE8L3RleHQ+PC9zdmc+'">
                         </div>
-                        
-                        <div class="value-prop" data-aos="slide-right" data-aos-delay="400">
-                            <div class="prop-icon">
-                                <i class="fas fa-bullseye"></i>
-                            </div>
-                            <div class="prop-content">
-                                <h4>Surgical Precision, Startup Speed</h4>
-                                <p>I find the 20% of regulatory requirements that drive 80% of compliance value. No bureaucracy, no waste—just results that keep patients safe and products shipping.</p>
-                            </div>
+                        <div class="carousel-slide">
+                            <img src="picture_4.jpg" alt="Ata - Action Shot" loading="lazy" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjQwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZGVmcz48bGluZWFyR3JhZGllbnQgaWQ9ImciIHgxPSIwJSIgeTE9IjAlIiB4Mj0iMTAwJSIgeTI9IjEwMCUiPjxzdG9wIG9mZnNldD0iMCUiIHN0eWxlPSJzdG9wLWNvbG9yOiMxZTQwYWY7Ii8+PHN0b3Agb2Zmc2V0PSI1MCUiIHN0eWxlPSJzdG9wLWNvbG9yOiNmYmJmMjQ7Ii8+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdHlsZT0ic3RvcC1jb2xvcjojZGMyNjI2OyIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZykiLz48Y2lyY2xlIGN4PSIyMDAiIGN5PSIxNTAiIHI9IjgwIiBmaWxsPSIjMmQzNzQ4IiBvcGFjaXR5PSIwLjgiLz48dGV4dCB4PSIyMDAiIHk9IjE2MCIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjQ4IiBmaWxsPSIjZmZmIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj7wn6SWPC90ZXh0Pjx0ZXh0IHg9IjIwMCIgeT0iMzAwIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMjAiIGZpbGw9IiNmZmYiIHRleHQtYW5jaG9yPSJtaWRkbGUiPkF0YSBQZXJHDEA8L3RleHQ+PC9zdmc+'">
                         </div>
-                        
-                        <div class="value-prop" data-aos="slide-right" data-aos-delay="500">
-                            <div class="prop-icon">
-                                <i class="fas fa-microscope"></i>
-                            </div>
-                            <div class="prop-content">
-                                <h4>Root Causes, Not Band Aids</h4>
-                                <p>When systems fail, I dig deeper than symptoms. My investigations don't just fix today's problem—they prevent next month's crisis.</p>
-                            </div>
+                        <div class="carousel-slide">
+                            <img src="picture_5.jpg" alt="Ata - Casual Style" loading="lazy" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjQwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZGVmcz48bGluZWFyR3JhZGllbnQgaWQ9ImciIHgxPSIwJSIgeTE9IjAlIiB4Mj0iMTAwJSIgeTI9IjEwMCUiPjxzdG9wIG9mZnNldD0iMCUiIHN0eWxlPSJzdG9wLWNvbG9yOiNmYmJmMjQ7Ii8+PHN0b3Agb2Zmc2V0PSI1MCUiIHN0eWxlPSJzdG9wLWNvbG9yOiNkYzI2MjY7Ii8+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdHlsZT0ic3RvcC1jb2xvcjojMWU0MGFmOyIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZykiLz48Y2lyY2xlIGN4PSIyMDAiIGN5PSIxNTAiIHI9IjgwIiBmaWxsPSIjMmQzNzQ4IiBvcGFjaXR5PSIwLjgiLz48dGV4dCB4PSIyMDAiIHk9IjE2MCIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjQ4IiBmaWxsPSIjZmZmIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj7wn6SWPC90ZXh0Pjx0ZXh0IHg9IjIwMCIgeT0iMzAwIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMjAiIGZpbGw9IiNmZmYiIHRleHQtYW5jaG9yPSJtaWRkbGUiPkF0YSBQZXJHDEE8L3RleHQ+PC9zdmc+'">
                         </div>
                     </div>
-                    
-                    <div class="learning-journey" data-aos="fade-up" data-aos-delay="600">
-                        <div class="learning-card">
-                            <div class="learning-header">
-                                <div class="learning-icon">
-                                    <i class="fas fa-graduation-cap"></i>
-                                </div>
-                                <h4>My FDA QSR & ISO 13485 Learning Journey</h4>
-                            </div>
-                            <div class="learning-content">
-                                <p>I'm currently building my foundation in FDA QSR and ISO 13485 requirements through hands on application and formal study. While I understand the basics and apply them daily in my current role, I'm committed to deepening this knowledge through the ASQ certification program with VA benefits. My approach combines practical experience with structured learning to ensure I can effectively support organizations in their compliance journey.</p>
-                                <div class="learning-progress">
-                                    <div class="progress-item">
-                                        <div class="progress-icon">
-                                            <i class="fas fa-book-open"></i>
-                                        </div>
-                                        <span>Studying ASQ Quality System fundamentals</span>
-                                    </div>
-                                    <div class="progress-item">
-                                        <div class="progress-icon">
-                                            <i class="fas fa-tools"></i>
-                                        </div>
-                                        <span>Applying concepts daily in medical device environment</span>
-                                    </div>
-                                    <div class="progress-item">
-                                        <div class="progress-icon">
-                                            <i class="fas fa-target"></i>
-                                        </div>
-                                        <span>Pursuing formal ASQ certification with VA benefits</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                </div>
+                
+                <div class="carousel-controls">
+                    <button class="carousel-btn prev-btn" id="prev-btn">‹</button>
+                    <div class="carousel-dots" id="carousel-dots">
+                        <button class="dot active" data-slide="0"></button>
+                        <button class="dot" data-slide="1"></button>
+                        <button class="dot" data-slide="2"></button>
+                        <button class="dot" data-slide="3"></button>
+                        <button class="dot" data-slide="4"></button>
                     </div>
-                    
-                    <div class="philosophy-quote" data-aos="fade-up" data-aos-delay="700">
-                        <div class="quote-container">
-                            <div class="quote-icon">
-                                <i class="fas fa-quote-left"></i>
-                            </div>
-                            <blockquote>
-                                <p>"Compliance isn't about checking boxes—it's about building systems so robust that excellence becomes inevitable."</p>
-                                <footer>— My approach to quality systems</footer>
-                            </blockquote>
-                        </div>
-                    </div>
+                    <button class="carousel-btn next-btn" id="next-btn">›</button>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Skills & Technical Competencies Section -->
-    <section id="skills" class="skills">
+    <!-- Python Demo Section -->
+    <section id="demos" class="python-demo-section">
         <div class="container">
-            <div class="section-header" data-aos="fade-up">
-                <h2 class="section-title">Technical Competencies</h2>
-                <div class="section-line"></div>
-                <p class="section-subtitle">Quantified proficiency across quality systems and emerging technologies</p>
-            </div>
+            <h2 class="section-title">Watch AtaBot Work Its Magic</h2>
             
-            <!-- Skills Chart -->
-            <div class="skills-chart-container" data-aos="fade-up" data-aos-delay="200">
-                <div class="chart-wrapper">
-                    <canvas id="skillsChart"></canvas>
-                </div>
-                <div class="skills-legend">
-                    <div class="legend-item">
-                        <div class="legend-color primary"></div>
-                        <span>Quality & Compliance</span>
-                    </div>
-                    <div class="legend-item">
-                        <div class="legend-color secondary"></div>
-                        <span>Technical & Data</span>
-                    </div>
-                    <div class="legend-item">
-                        <div class="legend-color accent"></div>
-                        <span>Leadership & Process</span>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Core Competencies Grid -->
-            <div class="competencies-grid" data-aos="fade-up" data-aos-delay="400">
-                <div class="competency-card" data-aos="flip-left" data-aos-delay="100">
-                    <div class="card-header">
-                        <div class="card-icon">
-                            <i class="fas fa-clipboard-check"></i>
-                        </div>
-                        <h3>Quality Systems</h3>
-                        <div class="proficiency-ring" data-percentage="60">
-                            <svg viewBox="0 0 100 100">
-                                <circle cx="50" cy="50" r="45" class="ring-bg"></circle>
-                                <circle cx="50" cy="50" r="45" class="ring-progress" data-percentage="60"></circle>
-                            </svg>
-                            <div class="percentage-text">60%</div>
-                        </div>
-                    </div>
-                    <div class="card-content">
-                        <ul>
-                            <li><i class="fas fa-check"></i> ISO 13485 Implementation</li>
-                            <li><i class="fas fa-check"></i> FDA QSR to QMSR Transition</li>
-                            <li><i class="fas fa-check"></i> Design Controls (DHF/DMR)</li>
-                            <li><i class="fas fa-check"></i> CAPA Root Cause Analysis</li>
-                        </ul>
-                    </div>
-                </div>
-                
-                <div class="competency-card" data-aos="flip-left" data-aos-delay="200">
-                    <div class="card-header">
-                        <div class="card-icon">
-                            <i class="fas fa-shield-alt"></i>
-                        </div>
-                        <h3>Risk Management</h3>
-                        <div class="proficiency-ring" data-percentage="80">
-                            <svg viewBox="0 0 100 100">
-                                <circle cx="50" cy="50" r="45" class="ring-bg"></circle>
-                                <circle cx="50" cy="50" r="45" class="ring-progress" data-percentage="80"></circle>
-                            </svg>
-                            <div class="percentage-text">80%</div>
-                        </div>
-                    </div>
-                    <div class="card-content">
-                        <ul>
-                            <li><i class="fas fa-check"></i> ISO 14971 Risk Assessment</li>
-                            <li><i class="fas fa-check"></i> DFMEA/PFMEA Analysis</li>
-                            <li><i class="fas fa-check"></i> Hazard Analysis</li>
-                            <li><i class="fas fa-check"></i> Post Market Surveillance</li>
-                        </ul>
-                    </div>
-                </div>
-                
-                <div class="competency-card" data-aos="flip-left" data-aos-delay="300">
-                    <div class="card-header">
-                        <div class="card-icon">
-                            <i class="fas fa-chart-line"></i>
-                        </div>
-                        <h3>Data & Analytics</h3>
-                        <div class="proficiency-ring" data-percentage="72">
-                            <svg viewBox="0 0 100 100">
-                                <circle cx="50" cy="50" r="45" class="ring-bg"></circle>
-                                <circle cx="50" cy="50" r="45" class="ring-progress" data-percentage="72"></circle>
-                            </svg>
-                            <div class="percentage-text">72%</div>
-                        </div>
-                    </div>
-                    <div class="card-content">
-                        <ul>
-                            <li><i class="fas fa-check"></i> Python & R Analytics</li>
-                            <li><i class="fas fa-check"></i> SPC & Control Charts</li>
-                            <li><i class="fas fa-check"></i> Machine Learning</li>
-                            <li><i class="fas fa-check"></i> Process Optimization</li>
-                        </ul>
-                    </div>
-                </div>
-                
-                <div class="competency-card" data-aos="flip-left" data-aos-delay="400">
-                    <div class="card-header">
-                        <div class="card-icon">
-                            <i class="fas fa-microscope"></i>
-                        </div>
-                        <h3>Validation</h3>
-                        <div class="proficiency-ring" data-percentage="65">
-                            <svg viewBox="0 0 100 100">
-                                <circle cx="50" cy="50" r="45" class="ring-bg"></circle>
-                                <circle cx="50" cy="50" r="45" class="ring-progress" data-percentage="65"></circle>
-                            </svg>
-                            <div class="percentage-text">65%</div>
-                        </div>
-                    </div>
-                    <div class="card-content">
-                        <ul>
-                            <li><i class="fas fa-check"></i> V&V Processes</li>
-                            <li><i class="fas fa-check"></i> IQ/OQ/PQ Protocols</li>
-                            <li><i class="fas fa-check"></i> Test Method Development</li>
-                            <li><i class="fas fa-check"></i> Software Validation</li>
-                        </ul>
-                    </div>
-                </div>
-                
-                <div class="competency-card" data-aos="flip-left" data-aos-delay="500">
-                    <div class="card-header">
-                        <div class="card-icon">
-                            <i class="fas fa-cogs"></i>
-                        </div>
-                        <h3>Process Excellence</h3>
-                        <div class="proficiency-ring" data-percentage="81">
-                            <svg viewBox="0 0 100 100">
-                                <circle cx="50" cy="50" r="45" class="ring-bg"></circle>
-                                <circle cx="50" cy="50" r="45" class="ring-progress" data-percentage="81"></circle>
-                            </svg>
-                            <div class="percentage-text">81%</div>
-                        </div>
-                    </div>
-                    <div class="card-content">
-                        <ul>
-                            <li><i class="fas fa-check"></i> Six Sigma Black Belt</li>
-                            <li><i class="fas fa-check"></i> Lean Manufacturing</li>
-                            <li><i class="fas fa-check"></i> Process Mapping</li>
-                            <li><i class="fas fa-check"></i> Continuous Improvement</li>
-                        </ul>
-                    </div>
-                </div>
-                
-                <div class="competency-card" data-aos="flip-left" data-aos-delay="600">
-                    <div class="card-header">
-                        <div class="card-icon">
-                            <i class="fas fa-brain"></i>
-                        </div>
-                        <h3>Emerging Tech</h3>
-                        <div class="proficiency-ring" data-percentage="68">
-                            <svg viewBox="0 0 100 100">
-                                <circle cx="50" cy="50" r="45" class="ring-bg"></circle>
-                                <circle cx="50" cy="50" r="45" class="ring-progress" data-percentage="68"></circle>
-                            </svg>
-                            <div class="percentage-text">68%</div>
-                        </div>
-                    </div>
-                    <div class="card-content">
-                        <ul>
-                            <li><i class="fas fa-check"></i> AI/ML Applications</li>
-                            <li><i class="fas fa-check"></i> Digital Quality Systems</li>
-                            <li><i class="fas fa-check"></i> IoT Integration</li>
-                            <li><i class="fas fa-check"></i> Predictive Analytics</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Experience Timeline -->
-    <section id="experience" class="experience">
-        <div class="container">
-            <div class="section-header" data-aos="fade-up">
-                <h2 class="section-title">Career Trajectory</h2>
-                <div class="section-line"></div>
-                <p class="section-subtitle">From Naval Aviation to Medical Device Innovation</p>
-            </div>
-            
-            <div class="timeline-container">
-                <div class="timeline">
-                    <div class="timeline-item" data-aos="fade-right" data-aos-delay="100">
-                        <div class="timeline-marker">
-                            <div class="marker-ring"></div>
-                            <div class="marker-dot"></div>
-                        </div>
-                        <div class="timeline-content">
-                            <div class="timeline-badge">Recent</div>
-                            <div class="timeline-header">
-                                <h3>Quality Assurance Lead</h3>
-                                <div class="company-info">
-                                    <span class="company">VerAvanti Inc.</span>
-                                    <span class="location">Bothell, WA</span>
-                                    <span class="period">2024 - October 2025</span>
-                                </div>
+            <div class="demo-container">
+                <div class="demo-editor">
+                    <div class="editor-header">
+                        <div class="editor-tabs">
+                            <div class="tab active">
+                                <span class="tab-icon">🐍</span>
+                                <span>demo.py</span>
                             </div>
-                            <div class="timeline-description">
-                                <p class="role-summary">Leading quality systems for FDA Breakthrough Device designation program</p>
-                                <div class="achievements-grid">
-                                    <div class="achievement">
-                                        <div class="achievement-metric">25%</div>
-                                        <div class="achievement-desc">Faster audit response</div>
-                                    </div>
-                                    <div class="achievement">
-                                        <div class="achievement-metric">8 Days</div>
-                                        <div class="achievement-desc">Saved per qualification cycle</div>
-                                    </div>
-                                    <div class="achievement">
-                                        <div class="achievement-metric">25%</div>
-                                        <div class="achievement-desc">Reduction in repeat defects</div>
-                                    </div>
-                                </div>
-                                <ul class="responsibility-list">
-                                    <li>Enhanced DHF/DMR traceability improving release readiness</li>
-                                    <li>Partnered with engineering on V&V protocols</li>
-                                    <li>Led NCMR/MRB investigations to root cause</li>
-                                    <li>Integrated Smartsheet dashboards with SolidWorks PDM</li>
-                                </ul>
-                            </div>
+                        </div>
+                        <div class="editor-controls">
+                            <button class="control-btn" id="play-btn" title="Run Code">
+                                <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                            </button>
+                            <button class="control-btn" id="pause-btn" title="Pause">
+                                <svg viewBox="0 0 24 24"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
+                            </button>
+                            <button class="control-btn" id="restart-btn" title="Restart">
+                                <svg viewBox="0 0 24 24"><path d="M12 5V1L7 6l5 5V7c3.31 0 6 2.69 6 6s-2.69 6-6 6-6-2.69-6-6H4c0 4.42 3.58 8 8 8s8-3.58 8-8-3.58-8-8-8z"/></svg>
+                            </button>
                         </div>
                     </div>
                     
-                    <div class="timeline-item" data-aos="fade-left" data-aos-delay="200">
-                        <div class="timeline-marker">
-                            <div class="marker-ring"></div>
-                            <div class="marker-dot"></div>
+                    <div class="editor-content">
+                        <div class="line-numbers" id="line-numbers">1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10</div>
+                        <pre class="code-content"><code id="demo-code" class="language-python"># AI Data Visualization Demo
+import matplotlib.pyplot as plt
+import numpy as np
+
+# Generate AI capability data
+categories = ['NLP', 'Vision', 'Reasoning', 'Code', 'Math']
+performance = [95, 88, 92, 97, 89]
+
+# Create animated chart
+plt.figure(figsize=(10, 6))
+plt.bar(categories, performance, color='cyan', alpha=0.8)
+plt.title('AtaBot AI Capabilities')
+plt.ylabel('Performance %')
+plt.ylim(0, 100)
+
+for i, v in enumerate(performance):
+    plt.text(i, v + 1, f'{v}%', ha='center', va='bottom')
+
+plt.tight_layout()
+plt.show()
+
+print("✨ Chart generated successfully!")
+print("AtaBot excels at:", max(zip(performance, categories))[1])</code></pre>
+                    </div>
+                </div>
+                
+                <div class="demo-output">
+                    <div class="output-header">
+                        <div class="output-title">
+                            <span class="output-icon">📊</span>
+                            <span>Output</span>
                         </div>
-                        <div class="timeline-content">
-                            <div class="timeline-badge">24 Years</div>
-                            <div class="timeline-header">
-                                <h3>Naval Aviation Quality & Readiness Leadership</h3>
-                                <div class="company-info">
-                                    <span class="company">U.S. Navy</span>
-                                    <span class="location">Multiple Bases</span>
-                                    <span class="period">2000 - 2024</span>
-                                </div>
-                            </div>
-                            <div class="timeline-description">
-                                <p class="role-summary">Progressive leadership roles in aviation safety, quality assurance, and training</p>
-                                <div class="achievements-grid">
-                                    <div class="achievement">
-                                        <div class="achievement-metric">40%</div>
-                                        <div class="achievement-desc">Faster audit closures</div>
-                                    </div>
-                                    <div class="achievement">
-                                        <div class="achievement-metric">100%</div>
-                                        <div class="achievement-desc">Safety compliance rate</div>
-                                    </div>
-                                    <div class="achievement">
-                                        <div class="achievement-metric">$750M+</div>
-                                        <div class="achievement-desc">Assets managed safely</div>
-                                    </div>
-                                </div>
-                                <ul class="responsibility-list">
-                                    <li>Built inspection frameworks reducing closure times</li>
-                                    <li>Designed simulation based training achieving zero incidents</li>
-                                    <li>Exercised Safe for Flight authority with zero safety incidents</li>
-                                    <li>Led QA programs eliminating recurring avionics failures</li>
-                                    <li>Implemented Lean initiatives cutting cycle time 20%</li>
-                                </ul>
-                            </div>
+                        <div class="output-status" id="output-status">Ready</div>
+                    </div>
+                    
+                    <div class="output-content" id="output-content">
+                        <div class="output-placeholder">
+                            <div class="placeholder-icon">⚡</div>
+                            <p>Click "Run Code" to see AtaBot in action!</p>
                         </div>
                     </div>
                 </div>
             </div>
+            
+            <div class="demo-selector">
+                <button class="demo-btn active" data-demo="0">
+                    <span class="demo-icon">📊</span>
+                    <span>Data Viz</span>
+                </button>
+                <button class="demo-btn" data-demo="1">
+                    <span class="demo-icon">🧠</span>
+                    <span>Neural Net</span>
+                </button>
+                <button class="demo-btn" data-demo="2">
+                    <span class="demo-icon">🖼️</span>
+                    <span>Image Process</span>
+                </button>
+                <button class="demo-btn" data-demo="3">
+                    <span class="demo-icon">💭</span>
+                    <span>Sentiment AI</span>
+                </button>
+                <button class="demo-btn" data-demo="4">
+                    <span class="demo-icon">🔄</span>
+                    <span>Sort Visualizer</span>
+                </button>
+                <button class="demo-btn" data-demo="5">
+                    <span class="demo-icon">📡</span>
+                    <span>Data Stream</span>
+                </button>
+                <button class="demo-btn" data-demo="6">
+                    <span class="demo-icon">🎯</span>
+                    <span>ML Training</span>
+                </button>
+            </div>
         </div>
     </section>
 
-    <!-- Achievements & Impact -->
-    <section id="achievements" class="achievements">
+    <!-- Capabilities Section -->
+    <section id="capabilities" class="capabilities-section">
         <div class="container">
-            <div class="section-header" data-aos="fade-up">
-                <h2 class="section-title">Quantified Impact</h2>
-                <div class="section-line"></div>
-                <p class="section-subtitle">Results that matter to your bottom line</p>
-            </div>
+            <h2 class="section-title">What AtaBot Brings to the Table</h2>
             
-            <div class="impact-dashboard" data-aos="fade-up" data-aos-delay="200">
-                <div class="dashboard-card primary">
+            <div class="capabilities-grid">
+                <div class="capability-card" data-capability="nlp">
                     <div class="card-icon">
-                        <i class="fas fa-file-alt"></i>
+                        <svg viewBox="0 0 24 24"><path d="M9 21c0 .5.4 1 1 1h4c.6 0 1-.5 1-1v-1H9v1zm3-19C8.1 2 5 5.1 5 9c0 2.4 1.2 4.5 3 5.7V17c0 .5.4 1 1 1h6c.6 0 1-.5 1-1v-2.3c1.8-1.3 3-3.4 3-5.7 0-3.9-3.1-7-7-7z"/></svg>
                     </div>
-                    <div class="card-content">
-                        <div class="metric-value" data-count="15">0</div>
-                        <div class="metric-suffix">%</div>
-                        <div class="metric-label">Documentation Accuracy Improvement</div>
-                        <div class="metric-context">Faster audit preparation, higher pass rates</div>
-                    </div>
-                    <div class="card-chart">
-                        <canvas id="accuracyChart"></canvas>
-                    </div>
+                    <h3 class="card-title">Natural Language Understanding</h3>
+                    <p class="card-description">Understands context like a human (almost)</p>
+                    <div class="card-glow"></div>
                 </div>
-                
-                <div class="dashboard-card secondary">
+
+                <div class="capability-card" data-capability="code">
                     <div class="card-icon">
-                        <i class="fas fa-bug"></i>
+                        <svg viewBox="0 0 24 24"><path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0L19.2 12l-4.6-4.6L16 6l6 6-6 6-1.4-1.4z"/></svg>
                     </div>
-                    <div class="card-content">
-                        <div class="metric-value" data-count="30">0</div>
-                        <div class="metric-suffix">%</div>
-                        <div class="metric-label">Repeat Defect Reduction</div>
-                        <div class="metric-context">Systematic root cause elimination</div>
-                    </div>
-                    <div class="card-chart">
-                        <canvas id="defectChart"></canvas>
-                    </div>
+                    <h3 class="card-title">Code Generation & Execution</h3>
+                    <p class="card-description">Writes Python, JavaScript, and 12 other languages</p>
+                    <div class="card-glow"></div>
                 </div>
-                
-                <div class="dashboard-card accent">
+
+                <div class="capability-card" data-capability="data">
                     <div class="card-icon">
-                        <i class="fas fa-clock"></i>
+                        <svg viewBox="0 0 24 24"><path d="M3.5 18.49l6-6.01 4 4L22 6.92l-1.41-1.41-7.09 7.97-4-4L2 16.99z"/></svg>
                     </div>
-                    <div class="card-content">
-                        <div class="metric-value" data-count="8">0</div>
-                        <div class="metric-suffix"> Days</div>
-                        <div class="metric-label">Saved Per Qualification Cycle</div>
-                        <div class="metric-context">Streamlined V&V processes</div>
-                    </div>
-                    <div class="card-chart">
-                        <canvas id="timeChart"></canvas>
-                    </div>
+                    <h3 class="card-title">Data Analysis & Visualization</h3>
+                    <p class="card-description">Turns boring data into beautiful insights</p>
+                    <div class="card-glow"></div>
                 </div>
-            </div>
-            
-            <!-- Certifications Showcase -->
-            <div class="certifications-showcase" data-aos="fade-up" data-aos-delay="400">
-                <h3>Professional Credentials</h3>
-                <div class="cert-categories">
-                    <div class="cert-category" data-category="quality">
-                        <div class="cert-header">
-                            <i class="fas fa-award"></i>
-                            <span>Quality Systems</span>
-                            <div class="cert-count">12</div>
-                        </div>
-                        <div class="cert-preview">
-                            <div class="cert-item">Six Sigma Black Belt</div>
-                            <div class="cert-item">Patient Safety Certificate - Johns Hopkins</div>
-                            <div class="cert-item">Quality Improvement & Management</div>
-                        </div>
+
+                <div class="capability-card" data-capability="problem">
+                    <div class="card-icon">
+                        <svg viewBox="0 0 24 24"><path d="M9 21c0 .5.4 1 1 1h4c.6 0 1-.5 1-1v-1H9v1zm3-19C8.1 2 5 5.1 5 9c0 2.4 1.2 4.5 3 5.7V17c0 .5.4 1 1 1h6c.6 0 1-.5 1-1v-2.3c1.8-1.3 3-3.4 3-5.7 0-3.9-3.1-7-7-7z"/></svg>
                     </div>
-                    
-                    <div class="cert-category" data-category="technical">
-                        <div class="cert-header">
-                            <i class="fas fa-code"></i>
-                            <span>Technical & AI</span>
-                            <div class="cert-count">15</div>
-                        </div>
-                        <div class="cert-preview">
-                            <div class="cert-item">Google Data Analytics Specialization</div>
-                            <div class="cert-item">Machine Learning with Python - IBM</div>
-                            <div class="cert-item">Deep Learning & Neural Networks</div>
-                        </div>
+                    <h3 class="card-title">Real-time Problem Solving</h3>
+                    <p class="card-description">Thinks fast, acts faster</p>
+                    <div class="card-glow"></div>
+                </div>
+
+                <div class="capability-card" data-capability="context">
+                    <div class="card-icon">
+                        <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
                     </div>
-                    
-                    <div class="cert-category" data-category="leadership">
-                        <div class="cert-header">
-                            <i class="fas fa-users"></i>
-                            <span>Leadership</span>
-                            <div class="cert-count">13</div>
-                        </div>
-                        <div class="cert-preview">
-                            <div class="cert-item">Google Project Management</div>
-                            <div class="cert-item">Agile Project Management</div>
-                            <div class="cert-item">Master Training Specialist</div>
-                        </div>
+                    <h3 class="card-title">Context-Aware Responses</h3>
+                    <p class="card-description">Remembers conversations like an elephant</p>
+                    <div class="card-glow"></div>
+                </div>
+
+                <div class="capability-card" data-capability="learning">
+                    <div class="card-icon">
+                        <svg viewBox="0 0 24 24"><path d="M16 6l2.29 2.29-4.88 4.88-4-4L2 16.59 3.41 18l6-6 4 4 6.3-6.29L22 12V6z"/></svg>
                     </div>
+                    <h3 class="card-title">Continuous Learning</h3>
+                    <p class="card-description">Gets smarter with every interaction</p>
+                    <div class="card-glow"></div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Industry News Section -->
-    <section id="news" class="industry-news">
+    <!-- AI News Section -->
+    <section id="news" class="news-section">
         <div class="container">
-            <div class="section-header" data-aos="fade-up">
-                <h2 class="section-title">Industry Intelligence</h2>
-                <div class="section-line"></div>
-                <p class="section-subtitle">Staying ahead of regulatory changes and quality trends</p>
-            </div>
-            
-            <div class="news-dashboard">
-                <div class="news-controls" data-aos="fade-up" data-aos-delay="100">
+            <div class="news-header">
+                <h2 class="section-title">What's Hot in AI 🔥</h2>
+                <div class="news-controls">
                     <div class="news-filters">
-                        <button class="filter-btn active" data-category="all">All News</button>
-                        <button class="filter-btn" data-category="fda">FDA Updates</button>
-                        <button class="filter-btn" data-category="iso">ISO Standards</button>
-                        <button class="filter-btn" data-category="qsr">QSR Changes</button>
-                        <button class="filter-btn" data-category="industry">Industry Trends</button>
-                        <button class="filter-btn" data-category="ai">AI & MedTech</button>
-                    </div>
-                    <div class="news-refresh">
-                        <button id="refresh-news" class="refresh-btn" title="Refresh Industry News">
-                            <i class="fas fa-sync-alt"></i>
-                            <span class="refresh-text">Refresh</span>
+                        <button class="filter-btn active" data-filter="all">
+                            <span>🌟</span> All
                         </button>
-                        <div class="last-updated">
-                            <i class="fas fa-clock"></i>
-                            <span id="last-update-time">Updated now</span>
-                        </div>
+                        <button class="filter-btn" data-filter="hot">
+                            <span>🔥</span> Hot
+                        </button>
+                        <button class="filter-btn" data-filter="ai">
+                            <span>🤖</span> AI Tech
+                        </button>
+                        <button class="filter-btn" data-filter="python">
+                            <span>🐍</span> Python
+                        </button>
+                        <button class="filter-btn" data-filter="tips">
+                            <span>💡</span> Tips
+                        </button>
+                    </div>
+                    <div class="news-search">
+                        <input type="text" placeholder="Search AI news..." id="news-search">
+                        <svg class="search-icon" viewBox="0 0 24 24">
+                            <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="news-grid" id="news-grid">
+                <!-- News cards will be dynamically generated -->
+            </div>
+            
+            <div class="news-footer">
+                <button class="load-more-btn" id="load-more-news">
+                    Load More News...
+                </button>
+                <div class="refresh-indicator" id="refresh-indicator">
+                    <span>Updates automatically • Last refresh: <span id="last-refresh">now</span></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Statistics Section -->
+    <section id="stats" class="stats-section">
+        <div class="container">
+            <h2 class="section-title">Performance Analytics</h2>
+            
+            <!-- Key Metrics Grid -->
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon">⚡</div>
+                    <div class="stat-value" data-value="147">0</div>
+                    <div class="stat-unit">ms</div>
+                    <div class="stat-label">Response Time</div>
+                    <div class="stat-chart">
+                        <canvas id="response-time-chart" width="300" height="100"></canvas>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon">🎯</div>
+                    <div class="stat-value" data-value="97.3">0</div>
+                    <div class="stat-unit">%</div>
+                    <div class="stat-label">Accuracy Rate</div>
+                    <div class="stat-circular">
+                        <canvas id="accuracy-donut" width="120" height="120"></canvas>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon">🇺🇸</div>
+                    <div class="stat-value" data-value="25847">0</div>
+                    <div class="stat-unit">tasks</div>
+                    <div class="stat-label">Tasks Completed</div>
+                    <div class="stat-trend">
+                        <canvas id="tasks-trend" width="200" height="60"></canvas>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon">👥</div>
+                    <div class="stat-value" data-value="12847">0</div>
+                    <div class="stat-unit">users</div>
+                    <div class="stat-label">Active Users</div>
+                    <div class="user-activity">
+                        <canvas id="user-activity-heatmap" width="250" height="80"></canvas>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon">🚀</div>
+                    <div class="stat-value" data-value="99.7">0</div>
+                    <div class="stat-unit">%</div>
+                    <div class="stat-label">System Uptime</div>
+                    <div class="uptime-indicator">
+                        <canvas id="uptime-gauge" width="150" height="75"></canvas>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon">💻</div>
+                    <div class="stat-value" data-value="3.7">0</div>
+                    <div class="stat-unit">M lines</div>
+                    <div class="stat-label">Code Generated</div>
+                    <div class="code-activity">
+                        <canvas id="code-languages" width="200" height="100"></canvas>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Advanced Analytics Dashboard -->
+            <div class="analytics-dashboard">
+                <div class="dashboard-header">
+                    <h3>Real-Time Analytics Dashboard</h3>
+                    <div class="dashboard-controls">
+                        <button class="control-btn active" data-period="1h">1H</button>
+                        <button class="control-btn" data-period="24h">24H</button>
+                        <button class="control-btn" data-period="7d">7D</button>
+                        <button class="control-btn" data-period="30d">30D</button>
                     </div>
                 </div>
                 
-                <div class="news-grid" data-aos="fade-up" data-aos-delay="200">
-                    <div class="news-card featured" data-category="fda">
-                        <div class="news-badge">FDA Alert</div>
-                        <div class="news-content">
-                            <h3>FDA QSR to QMSR Transition Timeline Extended</h3>
-                            <p>FDA announces extended compliance timeline for Quality Management System Regulation, providing manufacturers additional time to implement harmonized requirements.</p>
-                            <div class="news-meta">
-                                <span class="news-date">Oct 8, 2025</span>
-                                <span class="news-source">FDA.gov</span>
-                                <span class="news-impact high">High Impact</span>
-                            </div>
-                        </div>
-                        <div class="news-action">
-                            <i class="fas fa-external-link-alt"></i>
-                        </div>
+                <div class="dashboard-charts">
+                    <div class="chart-container">
+                        <h4>Performance Metrics Over Time</h4>
+                        <canvas id="performance-timeline" width="800" height="300"></canvas>
                     </div>
                     
-                    <div class="news-card" data-category="iso">
-                        <div class="news-badge">ISO Update</div>
-                        <div class="news-content">
-                            <h3>ISO 13485:2016 Amendment Draft Released</h3>
-                            <p>Draft amendment addresses AI/ML integration requirements for medical device quality management systems.</p>
-                            <div class="news-meta">
-                                <span class="news-date">Oct 5, 2025</span>
-                                <span class="news-source">ISO.org</span>
-                                <span class="news-impact medium">Medium Impact</span>
-                            </div>
-                        </div>
-                        <div class="news-action">
-                            <i class="fas fa-external-link-alt"></i>
-                        </div>
+                    <div class="chart-container">
+                        <h4>AI Model Accuracy Distribution</h4>
+                        <canvas id="accuracy-distribution" width="400" height="300"></canvas>
                     </div>
                     
-                    <div class="news-card" data-category="industry">
-                        <div class="news-badge">Industry</div>
-                        <div class="news-content">
-                            <h3>Digital Quality Systems Show 40% Efficiency Gains</h3>
-                            <p>New research reveals significant time savings from AI powered quality management platforms in medical device manufacturing.</p>
-                            <div class="news-meta">
-                                <span class="news-date">Oct 3, 2025</span>
-                                <span class="news-source">MedTech Dive</span>
-                                <span class="news-impact medium">Medium Impact</span>
-                            </div>
-                        </div>
-                        <div class="news-action">
-                            <i class="fas fa-external-link-alt"></i>
-                        </div>
-                    </div>
-                    
-                    <div class="news-card" data-category="qsr">
-                        <div class="news-badge">QSR</div>
-                        <div class="news-content">
-                            <h3>Risk Based Approach to Design Controls Guidance</h3>
-                            <p>FDA releases updated guidance on implementing risk based design controls for Class II and III medical devices.</p>
-                            <div class="news-meta">
-                                <span class="news-date">Sep 28, 2025</span>
-                                <span class="news-source">FDA.gov</span>
-                                <span class="news-impact high">High Impact</span>
-                            </div>
-                        </div>
-                        <div class="news-action">
-                            <i class="fas fa-external-link-alt"></i>
-                        </div>
-                    </div>
-                    
-                    <div class="news-card" data-category="industry">
-                        <div class="news-badge">Trend</div>
-                        <div class="news-content">
-                            <h3>Cybersecurity Requirements for Connected Devices</h3>
-                            <p>New EU MDR requirements emphasize cybersecurity considerations throughout device lifecycle management.</p>
-                            <div class="news-meta">
-                                <span class="news-date">Sep 25, 2025</span>
-                                <span class="news-source">EU Commission</span>
-                                <span class="news-impact high">High Impact</span>
-                            </div>
-                        </div>
-                        <div class="news-action">
-                            <i class="fas fa-external-link-alt"></i>
-                        </div>
-                    </div>
-                    
-                    <div class="news-card" data-category="iso">
-                        <div class="news-badge">ISO</div>
-                        <div class="news-content">
-                            <h3>ISO 14971:2019 Risk Management Best Practices</h3>
-                            <p>Industry consortium publishes comprehensive best practices guide for implementing ISO 14971 risk management processes.</p>
-                            <div class="news-meta">
-                                <span class="news-date">Sep 20, 2025</span>
-                                <span class="news-source">IMDRF</span>
-                                <span class="news-impact medium">Medium Impact</span>
-                            </div>
-                        </div>
-                        <div class="news-action">
-                            <i class="fas fa-external-link-alt"></i>
-                        </div>
-                    </div>
-                    
-                    <!-- AI & MedTech News -->
-                    <div class="news-card" data-category="ai">
-                        <div class="news-badge ai">AI MedTech</div>
-                        <div class="news-content">
-                            <h3>FDA Approves First AI Powered QMS Platform</h3>
-                            <p>Breakthrough approval for artificial intelligence system that automates CAPA processes and predicts quality issues in real time manufacturing.</p>
-                            <div class="news-meta">
-                                <span class="news-date">Oct 10, 2025</span>
-                                <span class="news-source">FDA.gov</span>
-                                <span class="news-impact high">High Impact</span>
-                            </div>
-                        </div>
-                        <div class="news-action">
-                            <i class="fas fa-external-link-alt"></i>
-                        </div>
-                    </div>
-                    
-                    <div class="news-card" data-category="ai">
-                        <div class="news-badge ai">AI Integration</div>
-                        <div class="news-content">
-                            <h3>Machine Learning in Medical Device Risk Assessment</h3>
-                            <p>Study shows 60% improvement in risk detection accuracy using AI enhanced DFMEA processes for implantable devices.</p>
-                            <div class="news-meta">
-                                <span class="news-date">Oct 7, 2025</span>
-                                <span class="news-source">Nature Biomedical</span>
-                                <span class="news-impact medium">Medium Impact</span>
-                            </div>
-                        </div>
-                        <div class="news-action">
-                            <i class="fas fa-external-link-alt"></i>
-                        </div>
-                    </div>
-                    
-                    <div class="news-card" data-category="industry">
-                        <div class="news-badge trending">Trending</div>
-                        <div class="news-content">
-                            <h3>Digital Twins Revolutionize Device Validation</h3>
-                            <p>Major manufacturers report 45% reduction in validation time using digital twin technology for IQ/OQ/PQ protocols.</p>
-                            <div class="news-meta">
-                                <span class="news-date">Oct 4, 2025</span>
-                                <span class="news-source">MedDevice Online</span>
-                                <span class="news-impact medium">Medium Impact</span>
-                            </div>
-                        </div>
-                        <div class="news-action">
-                            <i class="fas fa-external-link-alt"></i>
-                        </div>
-                    </div>
-                    
-                    <div class="news-card" data-category="ai">
-                        <div class="news-badge ai">AI Regulatory</div>
-                        <div class="news-content">
-                            <h3>EU AI Act Impact on Medical Device Software</h3>
-                            <p>New guidance clarifies AI Act requirements for SaMD and AI enabled medical devices entering European markets.</p>
-                            <div class="news-meta">
-                                <span class="news-date">Sep 30, 2025</span>
-                                <span class="news-source">EMA</span>
-                                <span class="news-impact high">High Impact</span>
-                            </div>
-                        </div>
-                        <div class="news-action">
-                            <i class="fas fa-external-link-alt"></i>
-                        </div>
+                    <div class="chart-container">
+                        <h4>User Interaction Heatmap</h4>
+                        <canvas id="interaction-heatmap" width="400" height="300"></canvas>
                     </div>
                 </div>
                 
-                <div class="news-insights" data-aos="fade-up" data-aos-delay="400">
-                    <h3>My Take on Current Trends</h3>
-                    <div class="insights-grid">
-                        <div class="insight-card">
-                            <div class="insight-icon">
-                                <i class="fas fa-brain"></i>
-                            </div>
-                            <div class="insight-content">
-                                <h4>AI Integration is Inevitable</h4>
-                                <p>Smart organizations are getting ahead of AI/ML quality requirements now. The companies that adapt first will have a competitive advantage when regulations catch up.</p>
-                            </div>
+                <div class="live-metrics">
+                    <div class="live-metric">
+                        <span class="metric-label">CPU Usage</span>
+                        <div class="metric-bar">
+                            <div class="metric-fill" data-value="34" style="width: 34%"></div>
                         </div>
-                        
-                        <div class="insight-card">
-                            <div class="insight-icon">
-                                <i class="fas fa-shield-alt"></i>
-                            </div>
-                            <div class="insight-content">
-                                <h4>Risk Based Approaches Win</h4>
-                                <p>Regulators are embracing risk based quality systems. Focus your resources where the real risks are—not where bureaucracy says you should.</p>
-                            </div>
+                        <span class="metric-value">34%</span>
+                    </div>
+                    
+                    <div class="live-metric">
+                        <span class="metric-label">Memory Usage</span>
+                        <div class="metric-bar">
+                            <div class="metric-fill" data-value="67" style="width: 67%"></div>
                         </div>
-                        
-                        <div class="insight-card">
-                            <div class="insight-icon">
-                                <i class="fas fa-network-wired"></i>
-                            </div>
-                            <div class="insight-content">
-                                <h4>Digital Transformation is Quality Transformation</h4>
-                                <p>The future belongs to organizations that can seamlessly blend digital tools with quality processes. Paper based systems are becoming compliance liabilities.</p>
-                            </div>
+                        <span class="metric-value">67%</span>
+                    </div>
+                    
+                    <div class="live-metric">
+                        <span class="metric-label">Network I/O</span>
+                        <div class="metric-bar">
+                            <div class="metric-fill" data-value="23" style="width: 23%"></div>
                         </div>
+                        <span class="metric-value">23 MB/s</span>
+                    </div>
+                    
+                    <div class="live-metric">
+                        <span class="metric-label">Active Connections</span>
+                        <div class="metric-bar">
+                            <div class="metric-fill" data-value="89" style="width: 89%"></div>
+                        </div>
+                        <span class="metric-value">1,247</span>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
+    <!-- Chat Section -->
+    <section id="chat" class="chat-section">
         <div class="container">
-            <div class="section-header" data-aos="fade-up">
-                <h2 class="section-title">Let's Build Something Exceptional</h2>
-                <div class="section-line"></div>
-                <p class="section-subtitle">Ready to transform your quality systems?</p>
-            </div>
+            <h2 class="section-title">Take AtaBot for a Spin</h2>
             
-            <div class="contact-content">
-                <div class="contact-info" data-aos="fade-right" data-aos-delay="200">
-                    <div class="contact-hero">
-                        <h3>Your Next Quality Systems Partner</h3>
-                        <p>Whether you're a startup building your first QMS or an established company preparing for FDA inspection, I bring growing proficiency and dedication to help you get there faster and more efficiently.</p>
+            <div class="chat-container">
+                <div class="chat-header">
+                    <div class="chat-avatar">
+                        <div class="avatar-ring"></div>
+                        <span class="avatar-icon">🤖</span>
                     </div>
-                    
-                    <div class="contact-methods">
-                        <a href="mailto:ataperata@gmail.com" class="contact-method primary">
-                            <div class="method-icon">
-                                <i class="fas fa-envelope"></i>
-                            </div>
-                            <div class="method-content">
-                                <span class="method-label">Email</span>
-                                <span class="method-value">ataperata@gmail.com</span>
-                            </div>
-                        </a>
-                        
-                        <a href="tel:+14254264035" class="contact-method">
-                            <div class="method-icon">
-                                <i class="fas fa-phone"></i>
-                            </div>
-                            <div class="method-content">
-                                <span class="method-label">Direct Line</span>
-                                <span class="method-value">(425) 426-4035</span>
-                            </div>
-                        </a>
-                        
-                        <a href="https://www.linkedin.com/in/ataperata/" target="_blank" class="contact-method">
-                            <div class="method-icon">
-                                <i class="fab fa-linkedin"></i>
-                            </div>
-                            <div class="method-content">
-                                <span class="method-label">LinkedIn</span>
-                                <span class="method-value">Connect Professionally</span>
-                            </div>
-                        </a>
-                        
-                        <a href="https://github.com/ataperata" target="_blank" class="contact-method">
-                            <div class="method-icon">
-                                <i class="fab fa-github"></i>
-                            </div>
-                            <div class="method-content">
-                                <span class="method-label">GitHub</span>
-                                <span class="method-value">View Technical Work</span>
-                            </div>
-                        </a>
+                    <div class="chat-info">
+                        <div class="chat-name">AtaBot</div>
+                        <div class="chat-status">⚡ Online</div>
+                    </div>
+                    <div class="chat-controls">
+                        <button class="control-icon" id="chat-settings" title="Settings">
+                            <svg viewBox="0 0 24 24"><path d="M12 15.5A3.5 3.5 0 0 1 8.5 12A3.5 3.5 0 0 1 12 8.5a3.5 3.5 0 0 1 3.5 3.5 3.5 3.5 0 0 1-3.5 3.5m7.43-2.53c.04-.32.07-.64.07-.97 0-.33-.03-.66-.07-1l2.11-1.63c.19-.15.24-.42.12-.64l-2-3.46c-.12-.22-.39-.31-.61-.22l-2.49 1c-.52-.39-1.06-.73-1.69-.98l-.37-2.65A.506.506 0 0 0 14 2h-4c-.25 0-.46.18-.5.42l-.37 2.65c-.63.25-1.17.59-1.69.98l-2.49-1c-.22-.09-.49 0-.61.22l-2 3.46c-.13.22-.07.49.12.64L4.57 11c-.04.34-.07.67-.07 1 0 .33.03.65.07.97l-2.11 1.66c-.19.15-.25.42-.12.64l2 3.46c.12.22.39.3.61.22l2.49-1.01c.52.4 1.06.74 1.69.99l.37 2.65c.04.24.25.42.5.42h4c.25 0 .46-.18.5-.42l.37-2.65c.63-.26 1.17-.59 1.69-.99l2.49 1.01c.22.08.49 0 .61-.22l2-3.46c.12-.22.07-.49-.12-.64l-2.11-1.66Z"/></svg>
+                        </button>
                     </div>
                 </div>
                 
-                <div class="contact-action" data-aos="fade-left" data-aos-delay="400">
-                    <div class="action-card">
-                        <div class="card-header">
-                            <div class="header-icon">
-                                <i class="fas fa-download"></i>
+                <div class="chat-messages" id="chat-messages">
+                    <div class="message bot-message">
+                        <div class="message-avatar">🤖</div>
+                        <div class="message-content">
+                            <div class="message-bubble">
+                                Hey there! I'm AtaBot, your friendly neighborhood AI. What impossible task shall we tackle today? 🚀
                             </div>
-                            <h3>Complete Professional Profile</h3>
-                        </div>
-                        <div class="card-content">
-                            <p>Get the full details of my experience, certifications, and quantified achievements in my comprehensive resume.</p>
-                            <a href="resume_enhanced_hcv.pdf" target="_blank" class="btn btn-resume-download">
-                                <i class="fas fa-file-pdf"></i>
-                                <span>Download PDF Resume</span>
-                                <div class="btn-glow"></div>
-                            </a>
-                            <div class="download-stats">
-                                <div class="stat">
-                                    <i class="fas fa-file-alt"></i>
-                                    <span>2 page executive summary</span>
-                                </div>
-                                <div class="stat">
-                                    <i class="fas fa-award"></i>
-                                    <span>40+ certifications detailed</span>
-                                </div>
-                                <div class="stat">
-                                    <i class="fas fa-chart-line"></i>
-                                    <span>Quantified impact metrics</span>
-                                </div>
-                            </div>
+                            <div class="message-time">Just now</div>
                         </div>
                     </div>
-                    
-                    <div class="quick-connect">
-                        <h4>Quick Connect Options</h4>
-                        <div class="connect-options">
-                            <button class="connect-btn" onclick="window.location.href='mailto:ataperata@gmail.com?subject=Quality Systems Consultation&body=Hi Ata, I would like to discuss...'">
-                                <i class="fas fa-rocket"></i>
-                                <span>Quick Email</span>
-                            </button>
-                            <button class="connect-btn" onclick="window.location.href='tel:+14254264035'">
-                                <i class="fas fa-phone-alt"></i>
-                                <span>Call Now</span>
-                            </button>
-                        </div>
+                </div>
+                
+                <div class="chat-quick-actions">
+                    <button class="quick-action" data-action="analyze">
+                        <span class="action-icon">📊</span>
+                        <span class="action-text">Analyze Data</span>
+                    </button>
+                    <button class="quick-action" data-action="code">
+                        <span class="action-icon">💻</span>
+                        <span class="action-text">Generate Code</span>
+                    </button>
+                    <button class="quick-action" data-action="joke">
+                        <span class="action-icon">😂</span>
+                        <span class="action-text">Tell Joke</span>
+                    </button>
+                    <button class="quick-action" data-action="help">
+                        <span class="action-icon">❓</span>
+                        <span class="action-text">Help</span>
+                    </button>
+                </div>
+                
+                <div class="chat-input-container">
+                    <div class="input-wrapper">
+                        <textarea 
+                            id="chat-input" 
+                            placeholder="Ask me anything..." 
+                            rows="1"
+                            maxlength="1000"
+                        ></textarea>
+                        <button class="send-btn" id="send-btn">
+                            <svg class="send-icon" viewBox="0 0 24 24">
+                                <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/>
+                            </svg>
+                        </button>
                     </div>
+                    <div class="input-counter" id="input-counter">0/1000</div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="footer">
+    <footer class="footer-section">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-brand">
-                    <div class="ap-logo-footer">
-                        <span class="letter-a">A</span>
-                        <span class="letter-p">P</span>
-                        <div class="checkmark">✓</div>
+                    <div class="footer-logo">
+                        <span class="logo-icon">🤖</span>
+                        <span class="logo-text">AtaBot</span>
                     </div>
-                    <div class="brand-text">
-                        <h3>Ata Perata</h3>
-                        <p>Elite Quality Systems Leader</p>
-                    </div>
+                    <p class="footer-tagline">AI that actually gets it</p>
                 </div>
-                <div class="footer-links">
-                    <div class="link-group">
-                        <h4>Professional</h4>
-                        <a href="mailto:ataperata@gmail.com">Email</a>
-                        <a href="tel:+14254264035">Phone</a>
-                        <a href="https://www.linkedin.com/in/ataperata/" target="_blank">LinkedIn</a>
-                    </div>
-                    <div class="link-group">
-                        <h4>Technical</h4>
-                        <a href="https://github.com/ataperata" target="_blank">GitHub</a>
-                        <a href="resume_enhanced_hcv.pdf" target="_blank">Resume PDF</a>
-                        <a href="#achievements">Portfolio</a>
-                    </div>
+                
+                <div class="footer-social">
+                    <a href="https://www.linkedin.com/in/ataperata/" target="_blank" class="footer-social-link">
+                        <svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                        LinkedIn
+                    </a>
+                    <a href="https://ataperata.github.io/" target="_blank" class="footer-social-link">
+                        <svg viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                        GitHub
+                    </a>
+                    <a href="https://ataperata.info" target="_blank" class="footer-social-link">
+                        <svg viewBox="0 0 24 24"><path d="M12 0L1.5 6v12L12 24l10.5-6V6L12 0zm7.5 16.5L12 21l-7.5-4.5v-9L12 3l7.5 4.5v9z"/></svg>
+                        Portfolio
+                    </a>
                 </div>
             </div>
+            
             <div class="footer-bottom">
-                <p>&copy; 2025 Ata Perata. Designed for excellence, built for impact.</p>
-                <div class="footer-tech">
-                    <span>Bothell, WA</span>
-                    <span>•</span>
-                    <span>Quality Systems Professional</span>
-                    <span>•</span>
-                    <span>Available for Consultation</span>
+                <div class="footer-copyright">
+                    © 2025 Ata Perata | Made with excessive neural networks and questionable amounts of coffee
                 </div>
+                <button class="back-to-top" id="back-to-top">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"/>
+                    </svg>
+                </button>
             </div>
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <!-- Chat Settings Modal -->
+    <div class="modal-overlay" id="settings-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Settings</h3>
+                <button class="close-modal">×</button>
+            </div>
+            <div class="modal-body">
+                <div class="setting-group">
+                    <label>Theme</label>
+                    <select id="theme-select">
+                        <option value="dark">Dark</option>
+                        <option value="light">Light</option>
+                        <option value="auto">Auto</option>
+                    </select>
+                </div>
+                <div class="setting-group">
+                    <label>Animation Speed</label>
+                    <select id="animation-speed">
+                        <option value="fast">Fast</option>
+                        <option value="normal" selected>Normal</option>
+                        <option value="slow">Slow</option>
+                        <option value="off">Off</option>
+                    </select>
+                </div>
+                <div class="setting-group">
+                    <label>Sound Effects</label>
+                    <input type="checkbox" id="sound-toggle" checked>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" onclick="clearConversation()">Clear Chat</button>
+                <button class="btn btn-primary" onclick="closeSettings()">Done</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/loading-system.js"></script>
+    <script src="js/charts-system.js"></script>
+    <script src="js/neural-background.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/python-demos.js"></script>
+    <script src="js/news-feed.js"></script>
+    <script src="js/chat-system.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>
