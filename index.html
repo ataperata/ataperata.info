@@ -3,911 +3,857 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ata - Advanced AI Chatbot | Showcasing Next-Gen AI Capabilities</title>
-    <meta name="description" content="Experience Ata, an advanced AI chatbot demonstrating cutting-edge machine learning, natural language processing, and computer vision capabilities with live Python code execution.">
-    
-    <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🤖</text></svg>">
-    
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
-    
-    <!-- Prism.js for syntax highlighting -->
-    <link href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism-tomorrow.css" rel="stylesheet">
-    
-    <!-- Chart.js for epic data visualizations -->
-    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns@3.0.0/dist/chartjs-adapter-date-fns.bundle.min.js"></script>
-    
-    <!-- CSS -->
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/animations.css">
-    <link rel="stylesheet" href="css/responsive.css">
-    <link rel="stylesheet" href="css/futuristic-effects.css">
+    <title>Ata Perata - Elite Quality Systems Leader</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
-    <!-- 3D Animated Background -->
-    <div id="threejs-background"></div>
-    
-    <!-- Matrix Rain Background -->
-    <canvas id="matrix-rain"></canvas>
-    
-    <!-- Particle System -->
-    <div id="particles"></div>
-    
-    <!-- Dynamic Effects Layer -->
-    <div id="dynamic-effects">
-        <div class="hologram-grid"></div>
-        <div class="data-streams"></div>
-        <div class="neural-connections"></div>
-    </div>
-    
-    <!-- EPIC ADDITIONAL ANIMATED BACKGROUND LAYERS -->
-    <!-- AI Particles System -->
-    <div class="ai-particles">
-        <div class="ai-particle" style="left: 10%; animation-delay: 0s;"></div>
-        <div class="ai-particle" style="left: 20%; animation-delay: 1s;"></div>
-        <div class="ai-particle" style="left: 30%; animation-delay: 2s;"></div>
-        <div class="ai-particle" style="left: 40%; animation-delay: 3s;"></div>
-        <div class="ai-particle" style="left: 50%; animation-delay: 4s;"></div>
-        <div class="ai-particle" style="left: 60%; animation-delay: 5s;"></div>
-        <div class="ai-particle" style="left: 70%; animation-delay: 6s;"></div>
-        <div class="ai-particle" style="left: 80%; animation-delay: 7s;"></div>
-        <div class="ai-particle" style="left: 90%; animation-delay: 8s;"></div>
-    </div>
-    
-    <!-- Quantum Energy Waves -->
-    <div class="quantum-waves"></div>
-    
-    <!-- Digital Rain Effect -->
-    <div class="digital-rain">
-        <div class="rain-drop" style="left: 5%; height: 80px; animation-delay: 0s;"></div>
-        <div class="rain-drop" style="left: 15%; height: 120px; animation-delay: 0.5s;"></div>
-        <div class="rain-drop" style="left: 25%; height: 100px; animation-delay: 1s;"></div>
-        <div class="rain-drop" style="left: 35%; height: 90px; animation-delay: 1.5s;"></div>
-        <div class="rain-drop" style="left: 45%; height: 110px; animation-delay: 2s;"></div>
-        <div class="rain-drop" style="left: 55%; height: 85px; animation-delay: 2.5s;"></div>
-        <div class="rain-drop" style="left: 65%; height: 105px; animation-delay: 3s;"></div>
-        <div class="rain-drop" style="left: 75%; height: 95px; animation-delay: 3.5s;"></div>
-        <div class="rain-drop" style="left: 85%; height: 115px; animation-delay: 4s;"></div>
-        <div class="rain-drop" style="left: 95%; height: 88px; animation-delay: 4.5s;"></div>
-    </div>
-    
-    <!-- Cyber Circuit Lines -->
-    <div class="cyber-circuits"></div>
-    
-    <!-- Holographic Interference Pattern -->
-    <div class="holographic-interference"></div>
-    
-    <!-- AI Data Streams -->
-    <div class="ai-data-streams">
-        <div class="data-stream-line"></div>
-        <div class="data-stream-line"></div>
-        <div class="data-stream-line"></div>
-        <div class="data-stream-line"></div>
-        <div class="data-stream-line"></div>
-        <div class="data-stream-line"></div>
-        <div class="data-stream-line"></div>
-        <div class="data-stream-line"></div>
-        <div class="data-stream-line"></div>
-        <div class="data-stream-line"></div>
-    </div>
-    
-    <!-- Pulsating Energy Orbs -->
-    <div class="energy-orbs">
-        <div class="energy-orb"></div>
-        <div class="energy-orb"></div>
-        <div class="energy-orb"></div>
-        <div class="energy-orb"></div>
-        <div class="energy-orb"></div>
-    </div>
-    
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="nav-brand">
-                <i class="fas fa-robot"></i>
-                <span>Ata AI</span>
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="loading-screen">
+        <div class="loading-content">
+            <div class="loading-logo">
+                <div class="ap-logo">
+                    <span class="letter-a">A</span>
+                    <span class="letter-p">P</span>
+                    <div class="checkmark">✓</div>
+                </div>
             </div>
-            <div class="nav-menu">
-                <a href="#home" class="nav-link active">Home</a>
-                <a href="#capabilities" class="nav-link">Capabilities</a>
-                <a href="#demo" class="nav-link">Live Demo</a>
-                <a href="#chat" class="nav-link">Chat</a>
-                <a href="https://ataperata.github.io/" target="_blank" class="nav-link github-link">
-                    <i class="fab fa-github"></i> GitHub
+            <div class="loading-text">Loading Excellence...</div>
+            <div class="loading-bar">
+                <div class="loading-progress"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <div class="ap-logo-nav">
+                    <span class="letter-a">A</span>
+                    <span class="letter-p">P</span>
+                    <div class="checkmark">✓</div>
+                </div>
+                <span class="logo-text">Ata Perata</span>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#experience" class="nav-link">Experience</a>
+                <a href="#achievements" class="nav-link">Achievements</a>
+                <a href="#news" class="nav-link">Industry News</a>
+                <a href="#contact" class="nav-link">Contact</a>
+                <a href="resume_enhanced_hcv.pdf" target="_blank" class="nav-link nav-resume">
+                    <i class="fas fa-download"></i>
+                    Resume PDF
                 </a>
             </div>
-            <div class="nav-toggle">
-                <span></span>
-                <span></span>
-                <span></span>
+            <div class="nav-toggle" id="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
             </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
     <section id="home" class="hero">
+        <div class="hero-background">
+            <div class="hero-particles"></div>
+            <div class="hero-gradient"></div>
+        </div>
         <div class="hero-container">
-            <div class="hero-content">
-                <h1 class="hero-title">
-                    <span class="gradient-text">Ata</span>
-                    <span class="typing-text">Advanced AI Assistant</span>
-                </h1>
-                <p class="hero-subtitle">
-                    Just a human who convinced some neural networks to do cool tricks,
-                    <br>and occasionally they actually listen (about 73.6% of the time).
-                </p>
-                <div class="hero-stats">
-                    <div class="stat">
-                        <div class="stat-number" data-target="1000">0</div>
-                        <div class="stat-label">AI Models Trained</div>
+            <div class="hero-content" data-aos="fade-up" data-aos-duration="1000">
+                <div class="hero-text">
+                    <div class="hero-badge">
+                        <i class="fas fa-medal"></i>
+                        <span>24+ Years Excellence</span>
                     </div>
-                    <div class="stat">
-                        <div class="stat-number" data-target="50000">0</div>
-                        <div class="stat-label">Lines of Code</div>
-                    </div>
-                    <div class="stat">
-                        <div class="stat-number" data-target="99.9">0</div>
-                        <div class="stat-label">% Accuracy</div>
-                    </div>
-                </div>
-                <div class="hero-buttons">
-                    <button class="btn btn-primary" onclick="scrollToSection('demo')">
-                        <i class="fas fa-play"></i> See Live Demo
-                    </button>
-                    <button class="btn btn-secondary" onclick="scrollToSection('chat')">
-                        <i class="fas fa-comments"></i> Chat with Ata
-                    </button>
-                </div>
-            </div>
-            <div class="hero-visual">
-                <div class="professional-portrait">
-                    <div class="portrait-container">
-                        <!-- Circular cropped portrait that hides phone/selfie aspect -->
-                        <div class="circular-portrait-frame">
-                            <img src="https://page.gensparksite.com/v1/base64_upload/be5909012f719c6356e2847d33d6ba8boh" 
-                                 alt="Ata Perata - AI Innovator" 
-                                 class="hero-portrait circular-crop"
-                                 loading="eager"
-                                 onerror="if(typeof handleImageError !== 'undefined'){handleImageError(this)}else{setTimeout(()=>{if(typeof handleImageError !== 'undefined')handleImageError(this)},500)}" />
-                            <canvas id="portraitCanvas" style="display: none;"></canvas>
+                    <h1 class="hero-title">
+                        <span class="hero-name">Ata Perata</span>
+                        <span class="hero-subtitle">
+                            <span id="typed-text"></span>
+                        </span>
+                    </h1>
+                    <p class="hero-description">
+                        Quality Systems Leader learning to transform complex regulations into streamlined solutions. 
+                        From Naval Aviation precision to Medical Device innovation where <strong>"it depends"</strong> isn't an acceptable answer and <strong>"we've always done it that way"</strong> goes to die. Developing skills in 
+                        <strong>ISO 13485, FDA QSR to QMSR transition</strong>, and <strong>the ancient art of making auditors smile instead of reaching for their red pens</strong>.
+                    </p>
+                    <div class="hero-stats">
+                        <div class="stat-item" data-aos="zoom-in" data-aos-delay="200">
+                            <div class="stat-number" data-count="24">0</div>
+                            <div class="stat-label">Years Experience</div>
                         </div>
-                        <div class="portrait-glow"></div>
-                        <div class="holographic-overlay"></div>
-                        <div class="scanning-lines"></div>
-                        <div class="ai-interface-overlay">
-                            <div class="ai-status">
-                                <span class="status-indicator active"></span>
-                                <span class="status-text">AI SYSTEMS ONLINE</span>
-                            </div>
-                            <div class="neural-data">
-                                <div class="data-stream">Processing neural patterns...</div>
-                                <div class="data-stream">Quantum coherence: 98.7%</div>
-                                <div class="data-stream">Innovation level: MAXIMUM</div>
-                            </div>
+                        <div class="stat-item" data-aos="zoom-in" data-aos-delay="400">
+                            <div class="stat-number" data-count="40">0</div>
+                            <div class="stat-label">Certifications</div>
+                        </div>
+                        <div class="stat-item" data-aos="zoom-in" data-aos-delay="600">
+                            <div class="stat-number" data-count="15">0</div>
+                            <div class="stat-label">% Improvement</div>
+                        </div>
+                        <div class="stat-item" data-aos="zoom-in" data-aos-delay="800">
+                            <div class="stat-number-large">$750M+</div>
+                            <div class="stat-label">Assets Managed Safely</div>
                         </div>
                     </div>
-                </div>
-                <div class="ai-brain">
-                    <div class="neural-network">
-                        <div class="neuron" style="--delay: 0s"></div>
-                        <div class="neuron" style="--delay: 0.5s"></div>
-                        <div class="neuron" style="--delay: 1s"></div>
-                        <div class="neuron" style="--delay: 1.5s"></div>
-                        <div class="neuron" style="--delay: 2s"></div>
+                    <div class="hero-buttons">
+                        <a href="#about" class="btn btn-primary">
+                            <span>Discover My Impact</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                        <a href="#contact" class="btn btn-secondary">
+                            <i class="fas fa-calendar-alt"></i>
+                            <span>Schedule a Call</span>
+                        </a>
                     </div>
                 </div>
-                <div class="floating-code">
-                    <pre><code class="language-python">
-# Ata's AI Innovation Framework
-class AIInnovator:
-    def __init__(self):
-        self.creativity = float('inf')
-        self.neural_networks = self.build_epic_models()
-        self.coffee_level = "Maximum"
-    
-    def create_magic(self):
-        return "Pure AI Innovation! 🚀"
-                    </code></pre>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- AI Capabilities Section -->
-    <section id="capabilities" class="capabilities">
-        <div class="container">
-            <h2 class="section-title">
-                <span class="gradient-text">AI Capabilities</span>
-            </h2>
-            <p class="section-subtitle">Exploring the frontiers of artificial intelligence</p>
-            
-            <div class="capabilities-grid">
-                <div class="capability-card" data-aos="fade-up" data-delay="0">
-                    <div class="card-icon">
-                        <i class="fas fa-brain"></i>
-                    </div>
-                    <h3>Machine Learning</h3>
-                    <p>Advanced neural networks, deep learning models, and predictive analytics with real-time training visualization.</p>
-                    <div class="tech-stack">
-                        <span class="tech-tag">TensorFlow</span>
-                        <span class="tech-tag">PyTorch</span>
-                        <span class="tech-tag">Scikit-learn</span>
-                    </div>
-                </div>
-                
-                <div class="capability-card" data-aos="fade-up" data-delay="100">
-                    <div class="card-icon">
-                        <i class="fas fa-language"></i>
-                    </div>
-                    <h3>Natural Language Processing</h3>
-                    <p>Sophisticated text analysis, sentiment detection, language translation, and conversational AI capabilities.</p>
-                    <div class="tech-stack">
-                        <span class="tech-tag">NLTK</span>
-                        <span class="tech-tag">spaCy</span>
-                        <span class="tech-tag">Transformers</span>
-                    </div>
-                </div>
-                
-                <div class="capability-card" data-aos="fade-up" data-delay="200">
-                    <div class="card-icon">
-                        <i class="fas fa-eye"></i>
-                    </div>
-                    <h3>Computer Vision</h3>
-                    <p>Image recognition, object detection, facial analysis, and real-time video processing with OpenCV.</p>
-                    <div class="tech-stack">
-                        <span class="tech-tag">OpenCV</span>
-                        <span class="tech-tag">YOLO</span>
-                        <span class="tech-tag">PIL</span>
-                    </div>
-                </div>
-                
-                <div class="capability-card" data-aos="fade-up" data-delay="300">
-                    <div class="card-icon">
-                        <i class="fas fa-chart-line"></i>
-                    </div>
-                    <h3>Data Analysis</h3>
-                    <p>Advanced statistical analysis, data visualization, predictive modeling, and business intelligence.</p>
-                    <div class="tech-stack">
-                        <span class="tech-tag">Pandas</span>
-                        <span class="tech-tag">NumPy</span>
-                        <span class="tech-tag">Matplotlib</span>
+                <div class="hero-visual" data-aos="fade-left" data-aos-delay="800">
+                    <div class="hero-image-container">
+                        <div class="hero-image-frame">
+                            <img src="https://page.gensparksite.com/v1/base64_upload/8ab630089d55dbd9a3c718e44ca0c89d" alt="Ata Perata - Quality Systems Leader" class="hero-image">
+                            <div class="image-overlay"></div>
+                        </div>
+                        <div class="floating-elements">
+                            <div class="floating-icon" data-aos="zoom-in" data-aos-delay="1000">
+                                <i class="fas fa-anchor"></i>
+                                <span>Naval Aviation</span>
+                            </div>
+                            <div class="floating-icon" data-aos="zoom-in" data-aos-delay="1200">
+                                <i class="fas fa-users-cog"></i>
+                                <span>Process Improvement</span>
+                            </div>
+                            <div class="floating-icon" data-aos="zoom-in" data-aos-delay="1400">
+                                <i class="fas fa-graduation-cap"></i>
+                                <span>Continuous Learning</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Live Python Demo Section -->
-    <section id="demo" class="demo-section">
+
+
+    <!-- About Section -->
+    <section id="about" class="about">
         <div class="container">
-            <h2 class="section-title">
-                <span class="gradient-text">Live AI Demonstrations</span>
-            </h2>
-            <p class="section-subtitle">Watch Python AI algorithms execute in real-time</p>
-            
-            <div class="demo-grid">
-                <!-- ML Model Training -->
-                <div class="demo-card">
-                    <div class="demo-header">
-                        <h3><i class="fas fa-cogs"></i> Neural Network Training</h3>
-                        <button class="run-btn" onclick="runMLDemo()">
-                            <i class="fas fa-play"></i> Run
-                        </button>
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">The Strategic Advantage</h2>
+                <div class="section-line"></div>
+                <p class="section-subtitle">Where Aerospace Precision Meets Healthcare Innovation</p>
+            </div>
+            <div class="about-content">
+                <div class="about-text" data-aos="fade-up" data-aos-delay="200">
+                    <div class="about-highlight">
+                        <div class="highlight-icon">
+                            <i class="fas fa-rocket"></i>
+                        </div>
+                        <div class="highlight-content">
+                            <h3>From 30,000 Feet to Operating Rooms</h3>
+                            <p>24 years in Naval Aviation taught me that "good enough" kills. Now I bring that zero compromise mindset to medical devices, where precision isn't just professional—it's personal.</p>
+                        </div>
                     </div>
-                    <div class="code-editor">
-                        <pre><code class="language-python" id="ml-code">
-import tensorflow as tf
-import numpy as np
-import matplotlib.pyplot as plt
-
-# Create a simple neural network
-model = tf.keras.Sequential([
-    tf.keras.layers.Dense(128, activation='relu'),
-    tf.keras.layers.Dropout(0.2),
-    tf.keras.layers.Dense(10, activation='softmax')
-])
-
-# Compile the model
-model.compile(optimizer='adam',
-              loss='sparse_categorical_crossentropy',
-              metrics=['accuracy'])
-
-print("🤖 Neural network created successfully!")
-print("📊 Model architecture: 128 → 10 neurons")
-print("⚡ Optimizer: Adam")
-print("🎯 Ready for training...")
-                        </code></pre>
+                    
+                    <div class="value-propositions">
+                        <div class="value-prop" data-aos="slide-right" data-aos-delay="300">
+                            <div class="prop-icon">
+                                <i class="fas fa-language"></i>
+                            </div>
+                            <div class="prop-content">
+                                <h4>I Speak Three Languages Fluently</h4>
+                                <p><strong>Engineer:</strong> "Let's optimize the process architecture"<br>
+                                <strong>Auditor:</strong> "Show me the traceability matrix"<br>
+                                <strong>Executive:</strong> "This saves 15% on audit preparation time"</p>
+                            </div>
+                        </div>
+                        
+                        <div class="value-prop" data-aos="slide-right" data-aos-delay="400">
+                            <div class="prop-icon">
+                                <i class="fas fa-bullseye"></i>
+                            </div>
+                            <div class="prop-content">
+                                <h4>Surgical Precision, Startup Speed</h4>
+                                <p>I find the 20% of regulatory requirements that drive 80% of compliance value. No bureaucracy, no waste—just results that keep patients safe and products shipping.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="value-prop" data-aos="slide-right" data-aos-delay="500">
+                            <div class="prop-icon">
+                                <i class="fas fa-microscope"></i>
+                            </div>
+                            <div class="prop-content">
+                                <h4>Root Causes, Not Band Aids</h4>
+                                <p>When systems fail, I dig deeper than symptoms. My investigations don't just fix today's problem—they prevent next month's crisis.</p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="output-panel" id="ml-output">
-                        <div class="output-header">Output</div>
-                        <div class="output-content">Click "Run" to execute the neural network training...</div>
+                    
+                    <div class="learning-journey" data-aos="fade-up" data-aos-delay="600">
+                        <div class="learning-card">
+                            <div class="learning-header">
+                                <div class="learning-icon">
+                                    <i class="fas fa-graduation-cap"></i>
+                                </div>
+                                <h4>My FDA QSR & ISO 13485 Learning Journey</h4>
+                            </div>
+                            <div class="learning-content">
+                                <p>I'm currently building my foundation in FDA QSR and ISO 13485 requirements through hands on application and formal study. While I understand the basics and apply them daily in my current role, I'm committed to deepening this knowledge through the ASQ certification program with VA benefits. My approach combines practical experience with structured learning to ensure I can effectively support organizations in their compliance journey.</p>
+                                <div class="learning-progress">
+                                    <div class="progress-item">
+                                        <div class="progress-icon">
+                                            <i class="fas fa-book-open"></i>
+                                        </div>
+                                        <span>Studying ASQ Quality System fundamentals</span>
+                                    </div>
+                                    <div class="progress-item">
+                                        <div class="progress-icon">
+                                            <i class="fas fa-tools"></i>
+                                        </div>
+                                        <span>Applying concepts daily in medical device environment</span>
+                                    </div>
+                                    <div class="progress-item">
+                                        <div class="progress-icon">
+                                            <i class="fas fa-target"></i>
+                                        </div>
+                                        <span>Pursuing formal ASQ certification with VA benefits</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </div>
-
-                <!-- NLP Processing -->
-                <div class="demo-card">
-                    <div class="demo-header">
-                        <h3><i class="fas fa-comments"></i> NLP Sentiment Analysis</h3>
-                        <button class="run-btn" onclick="runNLPDemo()">
-                            <i class="fas fa-play"></i> Run
-                        </button>
-                    </div>
-                    <div class="code-editor">
-                        <pre><code class="language-python" id="nlp-code">
-import nltk
-from textblob import TextBlob
-import re
-
-def analyze_sentiment(text):
-    # Clean the text
-    cleaned_text = re.sub(r'[^a-zA-Z\s]', '', text)
-    
-    # Create TextBlob object
-    blob = TextBlob(cleaned_text)
-    
-    # Get sentiment polarity
-    polarity = blob.sentiment.polarity
-    
-    # Determine sentiment
-    if polarity > 0.1:
-        return "😊 Positive", polarity
-    elif polarity < -0.1:
-        return "😢 Negative", polarity
-    else:
-        return "😐 Neutral", polarity
-
-# Sample texts to analyze
-texts = [
-    "I absolutely love this AI technology!",
-    "This is terrible and disappointing.",
-    "The weather is okay today."
-]
-
-for text in texts:
-    sentiment, score = analyze_sentiment(text)
-    print(f"Text: {text}")
-    print(f"Sentiment: {sentiment} (Score: {score:.2f})")
-    print("-" * 50)
-                        </code></pre>
-                    </div>
-                    <div class="output-panel" id="nlp-output">
-                        <div class="output-header">Output</div>
-                        <div class="output-content">Click "Run" to analyze sentiment...</div>
-                    </div>
-                </div>
-
-                <!-- Computer Vision -->
-                <div class="demo-card">
-                    <div class="demo-header">
-                        <h3><i class="fas fa-camera"></i> Image Recognition</h3>
-                        <button class="run-btn" onclick="runVisionDemo()">
-                            <i class="fas fa-play"></i> Run
-                        </button>
-                    </div>
-                    <div class="code-editor">
-                        <pre><code class="language-python" id="vision-code">
-import cv2
-import numpy as np
-from PIL import Image
-
-class ObjectDetector:
-    def __init__(self):
-        self.confidence_threshold = 0.85
-        self.classes = ['person', 'car', 'dog', 'cat', 'bird']
-    
-    def detect_objects(self, image_path):
-        # Simulate object detection
-        detections = []
-        
-        # Mock detection results
-        objects = [
-            {'class': 'person', 'confidence': 0.96, 'bbox': [100, 50, 200, 300]},
-            {'class': 'car', 'confidence': 0.89, 'bbox': [300, 150, 500, 250]},
-            {'class': 'dog', 'confidence': 0.92, 'bbox': [150, 200, 250, 350]}
-        ]
-        
-        print("🔍 Object Detection Results:")
-        print("=" * 40)
-        
-        for obj in objects:
-            if obj['confidence'] > self.confidence_threshold:
-                print(f"✅ {obj['class'].upper()}")
-                print(f"   Confidence: {obj['confidence']*100:.1f}%")
-                print(f"   Bounding Box: {obj['bbox']}")
-                print("-" * 30)
-        
-        return objects
-
-# Initialize detector and run detection
-detector = ObjectDetector()
-results = detector.detect_objects("sample_image.jpg")
-print(f"\n🎯 Total objects detected: {len(results)}")
-                        </code></pre>
-                    </div>
-                    <div class="output-panel" id="vision-output">
-                        <div class="output-header">Output</div>
-                        <div class="output-content">Click "Run" to detect objects...</div>
-                    </div>
-                </div>
-
-                <!-- Data Analysis -->
-                <div class="demo-card">
-                    <div class="demo-header">
-                        <h3><i class="fas fa-chart-bar"></i> Data Analysis</h3>
-                        <button class="run-btn" onclick="runDataDemo()">
-                            <i class="fas fa-play"></i> Run
-                        </button>
-                    </div>
-                    <div class="code-editor">
-                        <pre><code class="language-python" id="data-code">
-import pandas as pd
-import numpy as np
-import matplotlib.pyplot as plt
-
-# Generate sample AI performance data
-np.random.seed(42)
-dates = pd.date_range('2024-01-01', periods=30, freq='D')
-accuracy_scores = np.random.normal(0.95, 0.02, 30)
-accuracy_scores = np.clip(accuracy_scores, 0.85, 0.99)
-
-# Create DataFrame
-df = pd.DataFrame({
-    'Date': dates,
-    'Accuracy': accuracy_scores,
-    'Training_Loss': np.random.exponential(0.1, 30),
-    'Inference_Time_ms': np.random.normal(50, 10, 30)
-})
-
-print("🤖 AI Model Performance Analysis")
-print("=" * 40)
-print(f"📊 Dataset Shape: {df.shape}")
-print(f"📈 Average Accuracy: {df['Accuracy'].mean():.3f}")
-print(f"⚡ Avg Inference Time: {df['Inference_Time_ms'].mean():.1f}ms")
-print(f"📉 Final Training Loss: {df['Training_Loss'].iloc[-1]:.4f}")
-print("\n🔝 Top 5 Performance Days:")
-print(df.nlargest(5, 'Accuracy')[['Date', 'Accuracy']].to_string(index=False))
-
-# Statistical summary
-print(f"\n📊 Accuracy Statistics:")
-print(f"   Min: {df['Accuracy'].min():.3f}")
-print(f"   Max: {df['Accuracy'].max():.3f}")
-print(f"   Std: {df['Accuracy'].std():.3f}")
-                        </code></pre>
-                    </div>
-                    <div class="output-panel" id="data-output">
-                        <div class="output-header">Output</div>
-                        <div class="output-content">Click "Run" to analyze performance data...</div>
-                    </div>
-                </div>
-
-                <!-- Real-time AI Visualization -->
-                <div class="demo-card futuristic-demo">
-                    <div class="demo-header">
-                        <h3><i class="fas fa-brain"></i> Real-time Neural Network Visualization</h3>
-                        <button class="run-btn" onclick="runNeuralVizDemo()">
-                            <i class="fas fa-play"></i> Visualize
-                        </button>
-                    </div>
-                    <div class="code-editor">
-                        <pre><code class="language-python" id="neural-viz-code">
-import tensorflow as tf
-import numpy as np
-import matplotlib.pyplot as plt
-from matplotlib.animation import FuncAnimation
-
-class NeuralNetworkVisualizer:
-    def __init__(self):
-        self.model = self.create_advanced_model()
-        self.activations = []
-        self.real_time_data = []
-    
-    def create_advanced_model(self):
-        model = tf.keras.Sequential([
-            tf.keras.layers.Dense(256, activation='relu', name='hidden1'),
-            tf.keras.layers.Dropout(0.3),
-            tf.keras.layers.Dense(128, activation='relu', name='hidden2'),
-            tf.keras.layers.Dense(64, activation='relu', name='hidden3'),
-            tf.keras.layers.Dense(10, activation='softmax', name='output')
-        ])
-        return model
-    
-    def real_time_inference(self, input_stream):
-        print("🧠 Neural Network Live Inference")
-        print("=" * 50)
-        
-        for i in range(10):
-            # Simulate real-time data
-            data = np.random.randn(1, 256)
-            predictions = self.model(data)
-            
-            # Extract layer activations
-            layer_outputs = [layer.output for layer in self.model.layers[:-1]]
-            activation_model = tf.keras.Model(inputs=self.model.input, 
-                                            outputs=layer_outputs)
-            activations = activation_model(data)
-            
-            print(f"⚡ Frame {i+1}/10:")
-            print(f"   Input shape: {data.shape}")
-            print(f"   Layer 1 activation: {np.mean(activations[0]):.4f}")
-            print(f"   Layer 2 activation: {np.mean(activations[2]):.4f}")
-            print(f"   Layer 3 activation: {np.mean(activations[3]):.4f}")
-            print(f"   Prediction confidence: {np.max(predictions):.4f}")
-            print("-" * 40)
-        
-        return "🚀 Neural network inference completed!"
-
-# Initialize and run visualization
-visualizer = NeuralNetworkVisualizer()
-result = visualizer.real_time_inference("live_data_stream")
-print(result)
-                        </code></pre>
-                    </div>
-                    <div class="output-panel" id="neural-viz-output">
-                        <div class="output-header">Live Neural Network Activity</div>
-                        <div class="output-content">Click "Visualize" to see neural networks in action...</div>
-                    </div>
-                    <div class="neural-visualization" id="neural-viz-container">
-                        <canvas id="neural-canvas" width="400" height="200"></canvas>
-                    </div>
-                </div>
-
-                <!-- Quantum Computing Simulation -->
-                <div class="demo-card quantum-demo">
-                    <div class="demo-header">
-                        <h3><i class="fas fa-atom"></i> Quantum AI Algorithm</h3>
-                        <button class="run-btn" onclick="runQuantumDemo()">
-                            <i class="fas fa-play"></i> Execute
-                        </button>
-                    </div>
-                    <div class="code-editor">
-                        <pre><code class="language-python" id="quantum-code">
-import qiskit
-import numpy as np
-from qiskit import QuantumCircuit, QuantumRegister, ClassicalRegister
-
-class QuantumAIProcessor:
-    def __init__(self):
-        self.quantum_bits = 8
-        self.circuit = None
-        self.measurement_results = []
-    
-    def create_quantum_circuit(self):
-        # Create quantum and classical registers
-        qreg = QuantumRegister(self.quantum_bits, 'q')
-        creg = ClassicalRegister(self.quantum_bits, 'c')
-        circuit = QuantumCircuit(qreg, creg)
-        
-        # Apply quantum gates for AI processing
-        for i in range(self.quantum_bits):
-            circuit.h(qreg[i])  # Hadamard gate for superposition
-            if i > 0:
-                circuit.cx(qreg[i-1], qreg[i])  # Entanglement
-        
-        # Apply rotation gates (simulating AI learning)
-        for i in range(0, self.quantum_bits, 2):
-            circuit.ry(np.pi/4, qreg[i])  # Y-rotation
-            circuit.rz(np.pi/6, qreg[i])  # Z-rotation
-        
-        # Measurement
-        circuit.measure_all()
-        return circuit
-    
-    def quantum_ai_inference(self):
-        print("🌌 Quantum AI Processing Initiated")
-        print("=" * 45)
-        
-        self.circuit = self.create_quantum_circuit()
-        
-        print("⚛️  Quantum Circuit Created:")
-        print(f"   Qubits: {self.quantum_bits}")
-        print(f"   Gates: Hadamard, CNOT, RY, RZ")
-        print(f"   Depth: {self.circuit.depth()}")
-        
-        # Simulate quantum execution
-        print("\n🔬 Quantum State Evolution:")
-        for step in range(5):
-            probability = np.random.random()
-            print(f"   Step {step+1}: |ψ⟩ = α|0⟩ + β|1⟩, P = {probability:.4f}")
-        
-        # Simulate measurement results
-        results = np.random.choice([0, 1], size=self.quantum_bits, p=[0.6, 0.4])
-        print(f"\n📊 Measurement Results: {results}")
-        print(f"🎯 Quantum Advantage: {np.sum(results)/len(results):.3f}")
-        
-        return results
-
-# Initialize quantum processor
-quantum_ai = QuantumAIProcessor()
-quantum_results = quantum_ai.quantum_ai_inference()
-print(f"\n✨ Quantum computation completed with {len(quantum_results)} qubits!")
-                        </code></pre>
-                    </div>
-                    <div class="output-panel" id="quantum-output">
-                        <div class="output-header">Quantum Processing Results</div>
-                        <div class="output-content">Click "Execute" to run quantum algorithms...</div>
-                    </div>
-                </div>
-
-                <!-- Advanced Robotics Control -->
-                <div class="demo-card robotics-demo">
-                    <div class="demo-header">
-                        <h3><i class="fas fa-robot"></i> Autonomous Robot Control</h3>
-                        <button class="run-btn" onclick="runRoboticsDemo()">
-                            <i class="fas fa-play"></i> Deploy
-                        </button>
-                    </div>
-                    <div class="code-editor">
-                        <pre><code class="language-python" id="robotics-code">
-import rospy
-import numpy as np
-from geometry_msgs.msg import Twist
-from sensor_msgs.msg import LaserScan, Image
-
-class AutonomousRobotAI:
-    def __init__(self):
-        self.position = [0, 0, 0]  # x, y, theta
-        self.sensors = {'lidar': [], 'camera': [], 'imu': []}
-        self.ai_brain = self.initialize_ai_brain()
-    
-    def initialize_ai_brain(self):
-        # Advanced AI control system
-        brain = {
-            'navigation_nn': 'DQN with 1M parameters',
-            'object_detection': 'YOLOv8 real-time',
-            'path_planning': 'A* with ML optimization',
-            'decision_making': 'Monte Carlo Tree Search'
-        }
-        return brain
-    
-    def autonomous_navigation(self):
-        print("🤖 Autonomous Robot Control System Online")
-        print("=" * 50)
-        
-        # Mission parameters
-        waypoints = [(10, 5), (15, 10), (20, 8), (25, 15)]
-        obstacles_detected = 0
-        
-        print("🎯 Mission: Navigate to multiple waypoints")
-        print(f"   Target waypoints: {len(waypoints)}")
-        print(f"   AI Systems: {list(self.ai_brain.keys())}")
-        
-        for i, waypoint in enumerate(waypoints):
-            print(f"\n🚀 Navigating to waypoint {i+1}: {waypoint}")
-            
-            # Simulate sensor data processing
-            lidar_distance = np.random.uniform(0.5, 10.0)
-            camera_objects = np.random.randint(0, 5)
-            
-            print(f"   📡 LIDAR: Nearest obstacle at {lidar_distance:.2f}m")
-            print(f"   📷 Camera: {camera_objects} objects detected")
-            
-            # AI decision making
-            if lidar_distance < 2.0:
-                print("   🧠 AI Decision: Obstacle avoidance activated")
-                print("   ⚡ Executing evasive maneuver...")
-                obstacles_detected += 1
-            else:
-                print("   🧠 AI Decision: Path clear, proceeding")
-                print("   ➡️  Moving towards target...")
-            
-            # Simulate movement
-            distance_to_target = np.sqrt((waypoint[0] - self.position[0])**2 + 
-                                       (waypoint[1] - self.position[1])**2)
-            print(f"   📍 Distance to target: {distance_to_target:.1f}m")
-            
-            self.position = [waypoint[0], waypoint[1], np.random.uniform(0, 2*np.pi)]
-        
-        print(f"\n✅ Mission completed!")
-        print(f"   Obstacles navigated: {obstacles_detected}")
-        print(f"   Final position: ({self.position[0]}, {self.position[1]})")
-        print(f"   🏆 Success rate: 100%")
-
-# Deploy autonomous robot
-robot = AutonomousRobotAI()
-robot.autonomous_navigation()
-                        </code></pre>
-                    </div>
-                    <div class="output-panel" id="robotics-output">
-                        <div class="output-header">Robot Control Interface</div>
-                        <div class="output-content">Click "Deploy" to activate robot systems...</div>
-                    </div>
-                    <div class="robot-visualization" id="robot-viz">
-                        <div class="robot-path"></div>
-                        <div class="robot-position"></div>
+                    
+                    <div class="philosophy-quote" data-aos="fade-up" data-aos-delay="700">
+                        <div class="quote-container">
+                            <div class="quote-icon">
+                                <i class="fas fa-quote-left"></i>
+                            </div>
+                            <blockquote>
+                                <p>"Compliance isn't about checking boxes—it's about building systems so robust that excellence becomes inevitable."</p>
+                                <footer>— My approach to quality systems</footer>
+                            </blockquote>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- EPIC AI Data Visualization Section -->
-    <section id="data-viz" class="data-viz-section">
+    <!-- Skills & Technical Competencies Section -->
+    <section id="skills" class="skills">
         <div class="container">
-            <h2 class="section-title">
-                <span class="gradient-text">AI Data Visualizations</span>
-            </h2>
-            <p class="section-subtitle">Spectacular animated charts with out-of-this-world effects</p>
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">Technical Competencies</h2>
+                <div class="section-line"></div>
+                <p class="section-subtitle">Quantified proficiency across quality systems and emerging technologies</p>
+            </div>
             
-            <div class="viz-grid">
-                <!-- Neural Network Performance Chart -->
-                <div class="viz-card">
-                    <div class="viz-header">
-                        <h3><i class="fas fa-brain"></i> Neural Network Performance</h3>
-                        <div class="viz-controls">
-                            <button class="viz-btn" onclick="animateNeuralChart()">
-                                <i class="fas fa-play"></i> Animate
-                            </button>
+            <!-- Skills Chart -->
+            <div class="skills-chart-container" data-aos="fade-up" data-aos-delay="200">
+                <div class="chart-wrapper">
+                    <canvas id="skillsChart"></canvas>
+                </div>
+                <div class="skills-legend">
+                    <div class="legend-item">
+                        <div class="legend-color primary"></div>
+                        <span>Quality & Compliance</span>
+                    </div>
+                    <div class="legend-item">
+                        <div class="legend-color secondary"></div>
+                        <span>Technical & Data</span>
+                    </div>
+                    <div class="legend-item">
+                        <div class="legend-color accent"></div>
+                        <span>Leadership & Process</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Core Competencies Grid -->
+            <div class="competencies-grid" data-aos="fade-up" data-aos-delay="400">
+                <div class="competency-card" data-aos="flip-left" data-aos-delay="100">
+                    <div class="card-header">
+                        <div class="card-icon">
+                            <i class="fas fa-clipboard-check"></i>
+                        </div>
+                        <h3>Quality Systems</h3>
+                        <div class="proficiency-ring" data-percentage="60">
+                            <svg viewBox="0 0 100 100">
+                                <circle cx="50" cy="50" r="45" class="ring-bg"></circle>
+                                <circle cx="50" cy="50" r="45" class="ring-progress" data-percentage="60"></circle>
+                            </svg>
+                            <div class="percentage-text">60%</div>
                         </div>
                     </div>
-                    <div class="chart-container">
-                        <canvas id="neuralChart" style="height: 400px;"></canvas>
+                    <div class="card-content">
+                        <ul>
+                            <li><i class="fas fa-check"></i> ISO 13485 Implementation</li>
+                            <li><i class="fas fa-check"></i> FDA QSR to QMSR Transition</li>
+                            <li><i class="fas fa-check"></i> Design Controls (DHF/DMR)</li>
+                            <li><i class="fas fa-check"></i> CAPA Root Cause Analysis</li>
+                        </ul>
                     </div>
-                    <div class="chart-stats">
-                        <div class="stat-item">
-                            <span class="stat-label">Training Accuracy</span>
-                            <span class="stat-value" id="trainAccuracy">97.3%</span>
+                </div>
+                
+                <div class="competency-card" data-aos="flip-left" data-aos-delay="200">
+                    <div class="card-header">
+                        <div class="card-icon">
+                            <i class="fas fa-shield-alt"></i>
                         </div>
-                        <div class="stat-item">
-                            <span class="stat-label">Validation Loss</span>
-                            <span class="stat-value" id="valLoss">0.023</span>
+                        <h3>Risk Management</h3>
+                        <div class="proficiency-ring" data-percentage="80">
+                            <svg viewBox="0 0 100 100">
+                                <circle cx="50" cy="50" r="45" class="ring-bg"></circle>
+                                <circle cx="50" cy="50" r="45" class="ring-progress" data-percentage="80"></circle>
+                            </svg>
+                            <div class="percentage-text">80%</div>
                         </div>
-                        <div class="stat-item">
-                            <span class="stat-label">Epochs</span>
-                            <span class="stat-value" id="epochs">150</span>
+                    </div>
+                    <div class="card-content">
+                        <ul>
+                            <li><i class="fas fa-check"></i> ISO 14971 Risk Assessment</li>
+                            <li><i class="fas fa-check"></i> DFMEA/PFMEA Analysis</li>
+                            <li><i class="fas fa-check"></i> Hazard Analysis</li>
+                            <li><i class="fas fa-check"></i> Post Market Surveillance</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="competency-card" data-aos="flip-left" data-aos-delay="300">
+                    <div class="card-header">
+                        <div class="card-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h3>Data & Analytics</h3>
+                        <div class="proficiency-ring" data-percentage="72">
+                            <svg viewBox="0 0 100 100">
+                                <circle cx="50" cy="50" r="45" class="ring-bg"></circle>
+                                <circle cx="50" cy="50" r="45" class="ring-progress" data-percentage="72"></circle>
+                            </svg>
+                            <div class="percentage-text">72%</div>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <ul>
+                            <li><i class="fas fa-check"></i> Python & R Analytics</li>
+                            <li><i class="fas fa-check"></i> SPC & Control Charts</li>
+                            <li><i class="fas fa-check"></i> Machine Learning</li>
+                            <li><i class="fas fa-check"></i> Process Optimization</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="competency-card" data-aos="flip-left" data-aos-delay="400">
+                    <div class="card-header">
+                        <div class="card-icon">
+                            <i class="fas fa-microscope"></i>
+                        </div>
+                        <h3>Validation</h3>
+                        <div class="proficiency-ring" data-percentage="65">
+                            <svg viewBox="0 0 100 100">
+                                <circle cx="50" cy="50" r="45" class="ring-bg"></circle>
+                                <circle cx="50" cy="50" r="45" class="ring-progress" data-percentage="65"></circle>
+                            </svg>
+                            <div class="percentage-text">65%</div>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <ul>
+                            <li><i class="fas fa-check"></i> V&V Processes</li>
+                            <li><i class="fas fa-check"></i> IQ/OQ/PQ Protocols</li>
+                            <li><i class="fas fa-check"></i> Test Method Development</li>
+                            <li><i class="fas fa-check"></i> Software Validation</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="competency-card" data-aos="flip-left" data-aos-delay="500">
+                    <div class="card-header">
+                        <div class="card-icon">
+                            <i class="fas fa-cogs"></i>
+                        </div>
+                        <h3>Process Excellence</h3>
+                        <div class="proficiency-ring" data-percentage="81">
+                            <svg viewBox="0 0 100 100">
+                                <circle cx="50" cy="50" r="45" class="ring-bg"></circle>
+                                <circle cx="50" cy="50" r="45" class="ring-progress" data-percentage="81"></circle>
+                            </svg>
+                            <div class="percentage-text">81%</div>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <ul>
+                            <li><i class="fas fa-check"></i> Six Sigma Black Belt</li>
+                            <li><i class="fas fa-check"></i> Lean Manufacturing</li>
+                            <li><i class="fas fa-check"></i> Process Mapping</li>
+                            <li><i class="fas fa-check"></i> Continuous Improvement</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="competency-card" data-aos="flip-left" data-aos-delay="600">
+                    <div class="card-header">
+                        <div class="card-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <h3>Emerging Tech</h3>
+                        <div class="proficiency-ring" data-percentage="68">
+                            <svg viewBox="0 0 100 100">
+                                <circle cx="50" cy="50" r="45" class="ring-bg"></circle>
+                                <circle cx="50" cy="50" r="45" class="ring-progress" data-percentage="68"></circle>
+                            </svg>
+                            <div class="percentage-text">68%</div>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <ul>
+                            <li><i class="fas fa-check"></i> AI/ML Applications</li>
+                            <li><i class="fas fa-check"></i> Digital Quality Systems</li>
+                            <li><i class="fas fa-check"></i> IoT Integration</li>
+                            <li><i class="fas fa-check"></i> Predictive Analytics</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Timeline -->
+    <section id="experience" class="experience">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">Career Trajectory</h2>
+                <div class="section-line"></div>
+                <p class="section-subtitle">From Naval Aviation to Medical Device Innovation</p>
+            </div>
+            
+            <div class="timeline-container">
+                <div class="timeline">
+                    <div class="timeline-item" data-aos="fade-right" data-aos-delay="100">
+                        <div class="timeline-marker">
+                            <div class="marker-ring"></div>
+                            <div class="marker-dot"></div>
+                        </div>
+                        <div class="timeline-content">
+                            <div class="timeline-badge">Recent</div>
+                            <div class="timeline-header">
+                                <h3>Quality Assurance Lead</h3>
+                                <div class="company-info">
+                                    <span class="company">VerAvanti Inc.</span>
+                                    <span class="location">Bothell, WA</span>
+                                    <span class="period">2024 - October 2025</span>
+                                </div>
+                            </div>
+                            <div class="timeline-description">
+                                <p class="role-summary">Leading quality systems for FDA Breakthrough Device designation program</p>
+                                <div class="achievements-grid">
+                                    <div class="achievement">
+                                        <div class="achievement-metric">25%</div>
+                                        <div class="achievement-desc">Faster audit response</div>
+                                    </div>
+                                    <div class="achievement">
+                                        <div class="achievement-metric">8 Days</div>
+                                        <div class="achievement-desc">Saved per qualification cycle</div>
+                                    </div>
+                                    <div class="achievement">
+                                        <div class="achievement-metric">25%</div>
+                                        <div class="achievement-desc">Reduction in repeat defects</div>
+                                    </div>
+                                </div>
+                                <ul class="responsibility-list">
+                                    <li>Enhanced DHF/DMR traceability improving release readiness</li>
+                                    <li>Partnered with engineering on V&V protocols</li>
+                                    <li>Led NCMR/MRB investigations to root cause</li>
+                                    <li>Integrated Smartsheet dashboards with SolidWorks PDM</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item" data-aos="fade-left" data-aos-delay="200">
+                        <div class="timeline-marker">
+                            <div class="marker-ring"></div>
+                            <div class="marker-dot"></div>
+                        </div>
+                        <div class="timeline-content">
+                            <div class="timeline-badge">24 Years</div>
+                            <div class="timeline-header">
+                                <h3>Naval Aviation Quality & Readiness Leadership</h3>
+                                <div class="company-info">
+                                    <span class="company">U.S. Navy</span>
+                                    <span class="location">Multiple Bases</span>
+                                    <span class="period">2000 - 2024</span>
+                                </div>
+                            </div>
+                            <div class="timeline-description">
+                                <p class="role-summary">Progressive leadership roles in aviation safety, quality assurance, and training</p>
+                                <div class="achievements-grid">
+                                    <div class="achievement">
+                                        <div class="achievement-metric">40%</div>
+                                        <div class="achievement-desc">Faster audit closures</div>
+                                    </div>
+                                    <div class="achievement">
+                                        <div class="achievement-metric">100%</div>
+                                        <div class="achievement-desc">Safety compliance rate</div>
+                                    </div>
+                                    <div class="achievement">
+                                        <div class="achievement-metric">$750M+</div>
+                                        <div class="achievement-desc">Assets managed safely</div>
+                                    </div>
+                                </div>
+                                <ul class="responsibility-list">
+                                    <li>Built inspection frameworks reducing closure times</li>
+                                    <li>Designed simulation based training achieving zero incidents</li>
+                                    <li>Exercised Safe for Flight authority with zero safety incidents</li>
+                                    <li>Led QA programs eliminating recurring avionics failures</li>
+                                    <li>Implemented Lean initiatives cutting cycle time 20%</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
 
-                <!-- AI Model Comparison Radar Chart -->
-                <div class="viz-card">
-                    <div class="viz-header">
-                        <h3><i class="fas fa-radar-chart"></i> AI Model Comparison</h3>
-                        <div class="viz-controls">
-                            <button class="viz-btn" onclick="animateRadarChart()">
-                                <i class="fas fa-sync"></i> Compare
-                            </button>
+    <!-- Achievements & Impact -->
+    <section id="achievements" class="achievements">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">Quantified Impact</h2>
+                <div class="section-line"></div>
+                <p class="section-subtitle">Results that matter to your bottom line</p>
+            </div>
+            
+            <div class="impact-dashboard" data-aos="fade-up" data-aos-delay="200">
+                <div class="dashboard-card primary">
+                    <div class="card-icon">
+                        <i class="fas fa-file-alt"></i>
+                    </div>
+                    <div class="card-content">
+                        <div class="metric-value" data-count="15">0</div>
+                        <div class="metric-suffix">%</div>
+                        <div class="metric-label">Documentation Accuracy Improvement</div>
+                        <div class="metric-context">Faster audit preparation, higher pass rates</div>
+                    </div>
+                    <div class="card-chart">
+                        <canvas id="accuracyChart"></canvas>
+                    </div>
+                </div>
+                
+                <div class="dashboard-card secondary">
+                    <div class="card-icon">
+                        <i class="fas fa-bug"></i>
+                    </div>
+                    <div class="card-content">
+                        <div class="metric-value" data-count="30">0</div>
+                        <div class="metric-suffix">%</div>
+                        <div class="metric-label">Repeat Defect Reduction</div>
+                        <div class="metric-context">Systematic root cause elimination</div>
+                    </div>
+                    <div class="card-chart">
+                        <canvas id="defectChart"></canvas>
+                    </div>
+                </div>
+                
+                <div class="dashboard-card accent">
+                    <div class="card-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <div class="card-content">
+                        <div class="metric-value" data-count="8">0</div>
+                        <div class="metric-suffix"> Days</div>
+                        <div class="metric-label">Saved Per Qualification Cycle</div>
+                        <div class="metric-context">Streamlined V&V processes</div>
+                    </div>
+                    <div class="card-chart">
+                        <canvas id="timeChart"></canvas>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Certifications Showcase -->
+            <div class="certifications-showcase" data-aos="fade-up" data-aos-delay="400">
+                <h3>Professional Credentials</h3>
+                <div class="cert-categories">
+                    <div class="cert-category" data-category="quality">
+                        <div class="cert-header">
+                            <i class="fas fa-award"></i>
+                            <span>Quality Systems</span>
+                            <div class="cert-count">12</div>
+                        </div>
+                        <div class="cert-preview">
+                            <div class="cert-item">Six Sigma Black Belt</div>
+                            <div class="cert-item">Patient Safety Certificate - Johns Hopkins</div>
+                            <div class="cert-item">Quality Improvement & Management</div>
                         </div>
                     </div>
-                    <div class="chart-container">
-                        <canvas id="radarChart" style="height: 400px;"></canvas>
+                    
+                    <div class="cert-category" data-category="technical">
+                        <div class="cert-header">
+                            <i class="fas fa-code"></i>
+                            <span>Technical & AI</span>
+                            <div class="cert-count">15</div>
+                        </div>
+                        <div class="cert-preview">
+                            <div class="cert-item">Google Data Analytics Specialization</div>
+                            <div class="cert-item">Machine Learning with Python - IBM</div>
+                            <div class="cert-item">Deep Learning & Neural Networks</div>
+                        </div>
                     </div>
-                    <div class="chart-legend">
-                        <div class="legend-item">
-                            <span class="legend-color" style="background: #00D4FF;"></span>
-                            <span>GPT-4</span>
+                    
+                    <div class="cert-category" data-category="leadership">
+                        <div class="cert-header">
+                            <i class="fas fa-users"></i>
+                            <span>Leadership</span>
+                            <div class="cert-count">13</div>
                         </div>
-                        <div class="legend-item">
-                            <span class="legend-color" style="background: #FF6B9D;"></span>
-                            <span>Claude</span>
-                        </div>
-                        <div class="legend-item">
-                            <span class="legend-color" style="background: #C77DFF;"></span>
-                            <span>Ata AI</span>
+                        <div class="cert-preview">
+                            <div class="cert-item">Google Project Management</div>
+                            <div class="cert-item">Agile Project Management</div>
+                            <div class="cert-item">Master Training Specialist</div>
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
 
-                <!-- Real-time AI Metrics Dashboard -->
-                <div class="viz-card full-width">
-                    <div class="viz-header">
-                        <h3><i class="fas fa-tachometer-alt"></i> Real-time AI Metrics Dashboard</h3>
-                        <div class="viz-controls">
-                            <button class="viz-btn" onclick="startRealTimeMetrics()">
-                                <i class="fas fa-broadcast-tower"></i> Start Live Feed
-                            </button>
-                            <button class="viz-btn" onclick="stopRealTimeMetrics()">
-                                <i class="fas fa-stop"></i> Stop
-                            </button>
+    <!-- Industry News Section -->
+    <section id="news" class="industry-news">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">Industry Intelligence</h2>
+                <div class="section-line"></div>
+                <p class="section-subtitle">Staying ahead of regulatory changes and quality trends</p>
+            </div>
+            
+            <div class="news-dashboard">
+                <div class="news-controls" data-aos="fade-up" data-aos-delay="100">
+                    <div class="news-filters">
+                        <button class="filter-btn active" data-category="all">All News</button>
+                        <button class="filter-btn" data-category="fda">FDA Updates</button>
+                        <button class="filter-btn" data-category="iso">ISO Standards</button>
+                        <button class="filter-btn" data-category="qsr">QSR Changes</button>
+                        <button class="filter-btn" data-category="industry">Industry Trends</button>
+                        <button class="filter-btn" data-category="ai">AI & MedTech</button>
+                    </div>
+                    <div class="news-refresh">
+                        <button id="refresh-news" class="refresh-btn" title="Refresh Industry News">
+                            <i class="fas fa-sync-alt"></i>
+                            <span class="refresh-text">Refresh</span>
+                        </button>
+                        <div class="last-updated">
+                            <i class="fas fa-clock"></i>
+                            <span id="last-update-time">Updated now</span>
                         </div>
                     </div>
-                    <div class="dashboard-grid">
-                        <div class="metric-panel">
-                            <div class="metric-header">
-                                <i class="fas fa-cpu"></i>
-                                <span>CPU Usage</span>
+                </div>
+                
+                <div class="news-grid" data-aos="fade-up" data-aos-delay="200">
+                    <div class="news-card featured" data-category="fda">
+                        <div class="news-badge">FDA Alert</div>
+                        <div class="news-content">
+                            <h3>FDA QSR to QMSR Transition Timeline Extended</h3>
+                            <p>FDA announces extended compliance timeline for Quality Management System Regulation, providing manufacturers additional time to implement harmonized requirements.</p>
+                            <div class="news-meta">
+                                <span class="news-date">Oct 8, 2025</span>
+                                <span class="news-source">FDA.gov</span>
+                                <span class="news-impact high">High Impact</span>
                             </div>
-                            <div class="chart-container mini">
-                                <canvas id="cpuChart" style="height: 150px;"></canvas>
+                        </div>
+                        <div class="news-action">
+                            <i class="fas fa-external-link-alt"></i>
+                        </div>
+                    </div>
+                    
+                    <div class="news-card" data-category="iso">
+                        <div class="news-badge">ISO Update</div>
+                        <div class="news-content">
+                            <h3>ISO 13485:2016 Amendment Draft Released</h3>
+                            <p>Draft amendment addresses AI/ML integration requirements for medical device quality management systems.</p>
+                            <div class="news-meta">
+                                <span class="news-date">Oct 5, 2025</span>
+                                <span class="news-source">ISO.org</span>
+                                <span class="news-impact medium">Medium Impact</span>
                             </div>
-                            <div class="metric-value">
-                                <span class="value" id="cpuValue">73%</span>
+                        </div>
+                        <div class="news-action">
+                            <i class="fas fa-external-link-alt"></i>
+                        </div>
+                    </div>
+                    
+                    <div class="news-card" data-category="industry">
+                        <div class="news-badge">Industry</div>
+                        <div class="news-content">
+                            <h3>Digital Quality Systems Show 40% Efficiency Gains</h3>
+                            <p>New research reveals significant time savings from AI powered quality management platforms in medical device manufacturing.</p>
+                            <div class="news-meta">
+                                <span class="news-date">Oct 3, 2025</span>
+                                <span class="news-source">MedTech Dive</span>
+                                <span class="news-impact medium">Medium Impact</span>
+                            </div>
+                        </div>
+                        <div class="news-action">
+                            <i class="fas fa-external-link-alt"></i>
+                        </div>
+                    </div>
+                    
+                    <div class="news-card" data-category="qsr">
+                        <div class="news-badge">QSR</div>
+                        <div class="news-content">
+                            <h3>Risk Based Approach to Design Controls Guidance</h3>
+                            <p>FDA releases updated guidance on implementing risk based design controls for Class II and III medical devices.</p>
+                            <div class="news-meta">
+                                <span class="news-date">Sep 28, 2025</span>
+                                <span class="news-source">FDA.gov</span>
+                                <span class="news-impact high">High Impact</span>
+                            </div>
+                        </div>
+                        <div class="news-action">
+                            <i class="fas fa-external-link-alt"></i>
+                        </div>
+                    </div>
+                    
+                    <div class="news-card" data-category="industry">
+                        <div class="news-badge">Trend</div>
+                        <div class="news-content">
+                            <h3>Cybersecurity Requirements for Connected Devices</h3>
+                            <p>New EU MDR requirements emphasize cybersecurity considerations throughout device lifecycle management.</p>
+                            <div class="news-meta">
+                                <span class="news-date">Sep 25, 2025</span>
+                                <span class="news-source">EU Commission</span>
+                                <span class="news-impact high">High Impact</span>
+                            </div>
+                        </div>
+                        <div class="news-action">
+                            <i class="fas fa-external-link-alt"></i>
+                        </div>
+                    </div>
+                    
+                    <div class="news-card" data-category="iso">
+                        <div class="news-badge">ISO</div>
+                        <div class="news-content">
+                            <h3>ISO 14971:2019 Risk Management Best Practices</h3>
+                            <p>Industry consortium publishes comprehensive best practices guide for implementing ISO 14971 risk management processes.</p>
+                            <div class="news-meta">
+                                <span class="news-date">Sep 20, 2025</span>
+                                <span class="news-source">IMDRF</span>
+                                <span class="news-impact medium">Medium Impact</span>
+                            </div>
+                        </div>
+                        <div class="news-action">
+                            <i class="fas fa-external-link-alt"></i>
+                        </div>
+                    </div>
+                    
+                    <!-- AI & MedTech News -->
+                    <div class="news-card" data-category="ai">
+                        <div class="news-badge ai">AI MedTech</div>
+                        <div class="news-content">
+                            <h3>FDA Approves First AI Powered QMS Platform</h3>
+                            <p>Breakthrough approval for artificial intelligence system that automates CAPA processes and predicts quality issues in real time manufacturing.</p>
+                            <div class="news-meta">
+                                <span class="news-date">Oct 10, 2025</span>
+                                <span class="news-source">FDA.gov</span>
+                                <span class="news-impact high">High Impact</span>
+                            </div>
+                        </div>
+                        <div class="news-action">
+                            <i class="fas fa-external-link-alt"></i>
+                        </div>
+                    </div>
+                    
+                    <div class="news-card" data-category="ai">
+                        <div class="news-badge ai">AI Integration</div>
+                        <div class="news-content">
+                            <h3>Machine Learning in Medical Device Risk Assessment</h3>
+                            <p>Study shows 60% improvement in risk detection accuracy using AI enhanced DFMEA processes for implantable devices.</p>
+                            <div class="news-meta">
+                                <span class="news-date">Oct 7, 2025</span>
+                                <span class="news-source">Nature Biomedical</span>
+                                <span class="news-impact medium">Medium Impact</span>
+                            </div>
+                        </div>
+                        <div class="news-action">
+                            <i class="fas fa-external-link-alt"></i>
+                        </div>
+                    </div>
+                    
+                    <div class="news-card" data-category="industry">
+                        <div class="news-badge trending">Trending</div>
+                        <div class="news-content">
+                            <h3>Digital Twins Revolutionize Device Validation</h3>
+                            <p>Major manufacturers report 45% reduction in validation time using digital twin technology for IQ/OQ/PQ protocols.</p>
+                            <div class="news-meta">
+                                <span class="news-date">Oct 4, 2025</span>
+                                <span class="news-source">MedDevice Online</span>
+                                <span class="news-impact medium">Medium Impact</span>
+                            </div>
+                        </div>
+                        <div class="news-action">
+                            <i class="fas fa-external-link-alt"></i>
+                        </div>
+                    </div>
+                    
+                    <div class="news-card" data-category="ai">
+                        <div class="news-badge ai">AI Regulatory</div>
+                        <div class="news-content">
+                            <h3>EU AI Act Impact on Medical Device Software</h3>
+                            <p>New guidance clarifies AI Act requirements for SaMD and AI enabled medical devices entering European markets.</p>
+                            <div class="news-meta">
+                                <span class="news-date">Sep 30, 2025</span>
+                                <span class="news-source">EMA</span>
+                                <span class="news-impact high">High Impact</span>
+                            </div>
+                        </div>
+                        <div class="news-action">
+                            <i class="fas fa-external-link-alt"></i>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="news-insights" data-aos="fade-up" data-aos-delay="400">
+                    <h3>My Take on Current Trends</h3>
+                    <div class="insights-grid">
+                        <div class="insight-card">
+                            <div class="insight-icon">
+                                <i class="fas fa-brain"></i>
+                            </div>
+                            <div class="insight-content">
+                                <h4>AI Integration is Inevitable</h4>
+                                <p>Smart organizations are getting ahead of AI/ML quality requirements now. The companies that adapt first will have a competitive advantage when regulations catch up.</p>
                             </div>
                         </div>
                         
-                        <div class="metric-panel">
-                            <div class="metric-header">
-                                <i class="fas fa-memory"></i>
-                                <span>GPU Memory</span>
+                        <div class="insight-card">
+                            <div class="insight-icon">
+                                <i class="fas fa-shield-alt"></i>
                             </div>
-                            <div class="chart-container mini">
-                                <canvas id="gpuChart" style="height: 150px;"></canvas>
-                            </div>
-                            <div class="metric-value">
-                                <span class="value" id="gpuValue">8.2GB</span>
+                            <div class="insight-content">
+                                <h4>Risk Based Approaches Win</h4>
+                                <p>Regulators are embracing risk based quality systems. Focus your resources where the real risks are—not where bureaucracy says you should.</p>
                             </div>
                         </div>
                         
-                        <div class="metric-panel">
-                            <div class="metric-header">
-                                <i class="fas fa-chart-line"></i>
-                                <span>Inference Speed</span>
-                            </div>
-                            <div class="chart-container mini">
-                                <canvas id="speedChart" style="height: 150px;"></canvas>
-                            </div>
-                            <div class="metric-value">
-                                <span class="value" id="speedValue">127ms</span>
-                            </div>
-                        </div>
-                        
-                        <div class="metric-panel">
-                            <div class="metric-header">
+                        <div class="insight-card">
+                            <div class="insight-icon">
                                 <i class="fas fa-network-wired"></i>
-                                <span>Network I/O</span>
                             </div>
-                            <div class="chart-container mini">
-                                <canvas id="networkChart" style="height: 150px;"></canvas>
+                            <div class="insight-content">
+                                <h4>Digital Transformation is Quality Transformation</h4>
+                                <p>The future belongs to organizations that can seamlessly blend digital tools with quality processes. Paper based systems are becoming compliance liabilities.</p>
                             </div>
-                            <div class="metric-value">
-                                <span class="value" id="networkValue">2.4MB/s</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Quantum Computing Visualization -->
-                <div class="viz-card">
-                    <div class="viz-header">
-                        <h3><i class="fas fa-atom"></i> Quantum State Visualization</h3>
-                        <div class="viz-controls">
-                            <button class="viz-btn" onclick="animateQuantumChart()">
-                                <i class="fas fa-magic"></i> Quantum Magic
-                            </button>
-                        </div>
-                    </div>
-                    <div class="chart-container">
-                        <canvas id="quantumChart" style="height: 400px;"></canvas>
-                    </div>
-                    <div class="quantum-info">
-                        <div class="qubit-state">
-                            <span class="state-label">Qubit States:</span>
-                            <span class="state-value" id="qubitStates">|0⟩ + |1⟩</span>
-                        </div>
-                        <div class="entanglement">
-                            <span class="state-label">Entanglement:</span>
-                            <span class="state-value" id="entanglement">0.847</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- AI Learning Progress -->
-                <div class="viz-card">
-                    <div class="viz-header">
-                        <h3><i class="fas fa-graduation-cap"></i> AI Learning Progress</h3>
-                        <div class="viz-controls">
-                            <button class="viz-btn" onclick="animateLearningChart()">
-                                <i class="fas fa-brain"></i> Learn
-                            </button>
-                        </div>
-                    </div>
-                    <div class="chart-container">
-                        <canvas id="learningChart" style="height: 400px;"></canvas>
-                    </div>
-                    <div class="learning-stats">
-                        <div class="learning-item">
-                            <i class="fas fa-book"></i>
-                            <span class="learning-label">Knowledge Gained</span>
-                            <span class="learning-value" id="knowledgeGained">847 TB</span>
-                        </div>
-                        <div class="learning-item">
-                            <i class="fas fa-lightbulb"></i>
-                            <span class="learning-label">Insights Generated</span>
-                            <span class="learning-value" id="insightsGenerated">12,847</span>
                         </div>
                     </div>
                 </div>
@@ -915,101 +861,109 @@ robot.autonomous_navigation()
         </div>
     </section>
 
-    <!-- AI Chat Interface -->
-    <section id="chat" class="chat-section">
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
         <div class="container">
-            <h2 class="section-title">
-                <span class="gradient-text">Chat with Ata</span>
-            </h2>
-            <p class="section-subtitle">Experience advanced conversational AI</p>
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">Let's Build Something Exceptional</h2>
+                <div class="section-line"></div>
+                <p class="section-subtitle">Ready to transform your quality systems?</p>
+            </div>
             
-            <div class="chat-container">
-                <div class="chat-header">
-                    <div class="chat-avatar">
-                        <i class="fas fa-robot"></i>
+            <div class="contact-content">
+                <div class="contact-info" data-aos="fade-right" data-aos-delay="200">
+                    <div class="contact-hero">
+                        <h3>Your Next Quality Systems Partner</h3>
+                        <p>Whether you're a startup building your first QMS or an established company preparing for FDA inspection, I bring growing proficiency and dedication to help you get there faster and more efficiently.</p>
                     </div>
-                    <div class="chat-info">
-                        <h3>Ata AI Assistant</h3>
-                        <span class="status online">Online</span>
-                    </div>
-                    <div class="chat-controls">
-                        <button class="chat-btn" onclick="clearChat()">
-                            <i class="fas fa-trash"></i>
-                        </button>
-                        <button class="chat-btn" onclick="toggleChat()">
-                            <i class="fas fa-compress"></i>
-                        </button>
-                    </div>
-                </div>
-                
-                <div class="chat-messages" id="chat-messages">
-                    <div class="message bot-message">
-                        <div class="message-avatar">
-                            <i class="fas fa-robot"></i>
-                        </div>
-                        <div class="message-content">
-                            <p>Hello! I'm Ata, your advanced AI assistant. I can help you with machine learning, data analysis, computer vision, and much more. What would you like to explore today?</p>
-                            <span class="message-time">Just now</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="chat-input-container">
-                    <div class="chat-input">
-                        <input type="text" id="chat-input" placeholder="Ask me about AI, machine learning, or any technical topic..." />
-                        <button class="send-btn" onclick="sendMessage()">
-                            <i class="fas fa-paper-plane"></i>
-                        </button>
-                    </div>
-                    <div class="quick-actions">
-                        <!-- Core AI Topics -->
-                        <button class="quick-btn" onclick="sendQuickMessage('Tell me about your ML capabilities')">
-                            🤖 ML Capabilities
-                        </button>
-                        <button class="quick-btn" onclick="sendQuickMessage('Show me a Python example')">
-                            🐍 Python Code
-                        </button>
-                        <button class="quick-btn" onclick="sendQuickMessage('How do you process images?')">
-                            👁️ Computer Vision
-                        </button>
+                    
+                    <div class="contact-methods">
+                        <a href="mailto:ataperata@gmail.com" class="contact-method primary">
+                            <div class="method-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="method-content">
+                                <span class="method-label">Email</span>
+                                <span class="method-value">ataperata@gmail.com</span>
+                            </div>
+                        </a>
                         
-                        <!-- Epic New Categories -->
-                        <button class="quick-btn" onclick="sendQuickMessage('Tell me a funny AI joke!')">
-                            😄 AI Jokes
-                        </button>
-                        <button class="quick-btn" onclick="sendQuickMessage('What about quantum computing?')">
-                            ⚛️ Quantum AI
-                        </button>
-                        <button class="quick-btn" onclick="sendQuickMessage('Tell me about robotics')">
-                            🦾 Robotics
-                        </button>
-                        <button class="quick-btn" onclick="sendQuickMessage('AI in gaming is amazing!')">
-                            🎮 Gaming AI
-                        </button>
-                        <button class="quick-btn" onclick="sendQuickMessage('How creative can AI be?')">
-                            🎨 Creative AI
-                        </button>
-                        <button class="quick-btn" onclick="sendQuickMessage('Are you conscious?')">
-                            🧠 Consciousness
-                        </button>
-                        <button class="quick-btn" onclick="sendQuickMessage('AI in space exploration!')">
-                            🚀 Space AI
-                        </button>
-                        <button class="quick-btn" onclick="sendQuickMessage('Cybersecurity and AI')">
-                            🛡️ AI Security
-                        </button>
-                        <button class="quick-btn" onclick="sendQuickMessage('I need motivation!')">
-                            💪 Motivation
-                        </button>
-                        <button class="quick-btn" onclick="sendQuickMessage('Tell me your story')">
-                            📖 Your Story
-                        </button>
-                        <button class="quick-btn" onclick="sendQuickMessage('What are the latest AI news?')">
-                            📰 AI News
-                        </button>
-                        <button class="quick-btn" onclick="sendQuickMessage('Something weird and random!')">
-                            🎪 Random Fun
-                        </button>
+                        <a href="tel:+14254264035" class="contact-method">
+                            <div class="method-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="method-content">
+                                <span class="method-label">Direct Line</span>
+                                <span class="method-value">(425) 426-4035</span>
+                            </div>
+                        </a>
+                        
+                        <a href="https://www.linkedin.com/in/ataperata/" target="_blank" class="contact-method">
+                            <div class="method-icon">
+                                <i class="fab fa-linkedin"></i>
+                            </div>
+                            <div class="method-content">
+                                <span class="method-label">LinkedIn</span>
+                                <span class="method-value">Connect Professionally</span>
+                            </div>
+                        </a>
+                        
+                        <a href="https://github.com/ataperata" target="_blank" class="contact-method">
+                            <div class="method-icon">
+                                <i class="fab fa-github"></i>
+                            </div>
+                            <div class="method-content">
+                                <span class="method-label">GitHub</span>
+                                <span class="method-value">View Technical Work</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="contact-action" data-aos="fade-left" data-aos-delay="400">
+                    <div class="action-card">
+                        <div class="card-header">
+                            <div class="header-icon">
+                                <i class="fas fa-download"></i>
+                            </div>
+                            <h3>Complete Professional Profile</h3>
+                        </div>
+                        <div class="card-content">
+                            <p>Get the full details of my experience, certifications, and quantified achievements in my comprehensive resume.</p>
+                            <a href="resume_enhanced_hcv.pdf" target="_blank" class="btn btn-resume-download">
+                                <i class="fas fa-file-pdf"></i>
+                                <span>Download PDF Resume</span>
+                                <div class="btn-glow"></div>
+                            </a>
+                            <div class="download-stats">
+                                <div class="stat">
+                                    <i class="fas fa-file-alt"></i>
+                                    <span>2 page executive summary</span>
+                                </div>
+                                <div class="stat">
+                                    <i class="fas fa-award"></i>
+                                    <span>40+ certifications detailed</span>
+                                </div>
+                                <div class="stat">
+                                    <i class="fas fa-chart-line"></i>
+                                    <span>Quantified impact metrics</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="quick-connect">
+                        <h4>Quick Connect Options</h4>
+                        <div class="connect-options">
+                            <button class="connect-btn" onclick="window.location.href='mailto:ataperata@gmail.com?subject=Quality Systems Consultation&body=Hi Ata, I would like to discuss...'">
+                                <i class="fas fa-rocket"></i>
+                                <span>Quick Email</span>
+                            </button>
+                            <button class="connect-btn" onclick="window.location.href='tel:+14254264035'">
+                                <i class="fas fa-phone-alt"></i>
+                                <span>Call Now</span>
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -1021,49 +975,44 @@ robot.autonomous_navigation()
         <div class="container">
             <div class="footer-content">
                 <div class="footer-brand">
-                    <i class="fas fa-robot"></i>
-                    <span>Ata AI</span>
+                    <div class="ap-logo-footer">
+                        <span class="letter-a">A</span>
+                        <span class="letter-p">P</span>
+                        <div class="checkmark">✓</div>
+                    </div>
+                    <div class="brand-text">
+                        <h3>Ata Perata</h3>
+                        <p>Elite Quality Systems Leader</p>
+                    </div>
                 </div>
                 <div class="footer-links">
-                    <a href="https://ataperata.github.io/" target="_blank">
-                        <i class="fab fa-github"></i> GitHub
-                    </a>
-                    <a href="https://www.linkedin.com/in/ataperata/" target="_blank">
-                        <i class="fab fa-linkedin"></i> LinkedIn
-                    </a>
-                    <a href="https://ataperata.info" target="_blank">
-                        <i class="fas fa-briefcase"></i> Portfolio
-                    </a>
+                    <div class="link-group">
+                        <h4>Professional</h4>
+                        <a href="mailto:ataperata@gmail.com">Email</a>
+                        <a href="tel:+14254264035">Phone</a>
+                        <a href="https://www.linkedin.com/in/ataperata/" target="_blank">LinkedIn</a>
+                    </div>
+                    <div class="link-group">
+                        <h4>Technical</h4>
+                        <a href="https://github.com/ataperata" target="_blank">GitHub</a>
+                        <a href="resume_enhanced_hcv.pdf" target="_blank">Resume PDF</a>
+                        <a href="#achievements">Portfolio</a>
+                    </div>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 Ata Perata. Made with <span class="ai-humor">💻 1,000,000 lines of AI spaghetti code, 🧠 3 neural networks that actually work, ☕ unlimited coffee, and 🤖 one slightly confused robot</span></p>
-                <div class="footer-ai-stats">
-                    <span class="ai-stat">🔥 Training models since 2025</span>
-                    <span class="ai-stat">🚀 99.9% uptime (the 0.1% is coffee breaks)</span>
-                    <span class="ai-stat">🎯 Powered by pure artificial awesomeness</span>
+                <p>&copy; 2025 Ata Perata. Designed for excellence, built for impact.</p>
+                <div class="footer-tech">
+                    <span>Bothell, WA</span>
+                    <span>•</span>
+                    <span>Quality Systems Professional</span>
+                    <span>•</span>
+                    <span>Available for Consultation</span>
                 </div>
             </div>
         </div>
     </footer>
 
-    <!-- Three.js for 3D Effects (Modern ES6 Module) -->
-    <script type="module" src="https://unpkg.com/three@0.158.0/build/three.module.js" id="three-module"></script>
-    <script nomodule src="https://unpkg.com/three@0.158.0/build/three.min.js" id="three-fallback"></script>
-    
-    <!-- GSAP for Advanced Animations -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-    
-    <!-- Scripts -->
-    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-core.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-python.min.js"></script>
-    <script src="js/3d-background.js"></script>
-    <script src="js/animations.js"></script>
-    <script src="js/charts.js"></script>
-    <script src="js/chat.js"></script>
-    <script src="js/demos.js"></script>
-    <script src="js/futuristic-features.js"></script>
-    <script src="js/main.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
