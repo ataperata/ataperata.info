@@ -1,0 +1,520 @@
+/* CRAZY FUTURISTIC EFFECTS CSS 🚀🌟 */
+/* Holographic displays, quantum effects, matrix mode, and more! */
+
+/* FUTURISTIC CONTROL PANEL */
+.futuristic-controls {
+    position: fixed;
+    top: 100px;
+    right: 20px;
+    z-index: 1001;
+    max-width: 250px;
+}
+
+.control-panel {
+    background: linear-gradient(135deg, 
+        rgba(0, 0, 0, 0.9) 0%, 
+        rgba(26, 26, 46, 0.95) 100%);
+    border: 2px solid rgba(0, 212, 255, 0.3);
+    border-radius: 15px;
+    padding: 15px;
+    backdrop-filter: blur(20px);
+    box-shadow: 
+        0 20px 40px rgba(0, 0, 0, 0.5),
+        0 0 30px rgba(0, 212, 255, 0.2),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    animation: control-panel-float 4s ease-in-out infinite;
+}
+
+@keyframes control-panel-float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-5px); }
+}
+
+.panel-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(0, 212, 255, 0.3);
+    color: #FFFFFF;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.panel-header i {
+    color: var(--primary-color);
+}
+
+.control-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.futuristic-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 12px;
+    background: linear-gradient(135deg, 
+        rgba(0, 212, 255, 0.1) 0%, 
+        rgba(255, 107, 157, 0.05) 100%);
+    color: var(--primary-color);
+    border: 1px solid rgba(0, 212, 255, 0.3);
+    border-radius: 10px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    text-align: left;
+}
+
+.futuristic-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, 
+        transparent, 
+        rgba(255, 255, 255, 0.1), 
+        transparent);
+    transition: left 0.5s ease;
+}
+
+.futuristic-btn:hover {
+    background: linear-gradient(135deg, 
+        rgba(0, 212, 255, 0.2) 0%, 
+        rgba(255, 107, 157, 0.1) 100%);
+    transform: translateX(5px);
+    border-color: rgba(0, 212, 255, 0.5);
+    box-shadow: 0 5px 20px rgba(0, 212, 255, 0.2);
+    color: #FFFFFF;
+}
+
+.futuristic-btn:hover::before {
+    left: 100%;
+}
+
+.futuristic-btn.active {
+    background: linear-gradient(135deg, 
+        rgba(0, 245, 160, 0.3) 0%, 
+        rgba(0, 212, 255, 0.2) 100%);
+    border-color: rgba(0, 245, 160, 0.5);
+    color: #FFFFFF;
+    box-shadow: 0 0 20px rgba(0, 245, 160, 0.3);
+}
+
+.futuristic-btn i {
+    min-width: 16px;
+}
+
+/* HOLOGRAPHIC EFFECTS */
+.holographic-text {
+    background: linear-gradient(45deg, 
+        #00D4FF, #FF6B9D, #C77DFF, #00F5A0, #00D4FF);
+    background-size: 400% 400%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: holographic-shift 3s ease-in-out infinite;
+    position: relative;
+    filter: drop-shadow(0 0 10px rgba(0, 212, 255, 0.5));
+}
+
+.holographic-text::before {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, #FF6B9D, #C77DFF, #00F5A0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    opacity: 0;
+    animation: holographic-glitch 0.1s linear infinite;
+}
+
+@keyframes holographic-shift {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+}
+
+@keyframes holographic-glitch {
+    0% { opacity: 0; transform: translate(0); }
+    2% { opacity: 0.8; transform: translate(2px, 0); }
+    4% { opacity: 0; transform: translate(-1px, 0); }
+    6% { opacity: 0.6; transform: translate(1px, 0); }
+    8% { opacity: 0; transform: translate(0); }
+    100% { opacity: 0; transform: translate(0); }
+}
+
+.holographic-hover {
+    animation-duration: 1s !important;
+    filter: drop-shadow(0 0 20px rgba(0, 212, 255, 0.8)) 
+            drop-shadow(0 0 30px rgba(255, 107, 157, 0.5)) !important;
+}
+
+.hologram-overlay-full {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    pointer-events: none;
+    background: 
+        repeating-linear-gradient(
+            0deg,
+            transparent,
+            transparent 2px,
+            rgba(0, 212, 255, 0.03) 2px,
+            rgba(0, 212, 255, 0.03) 4px
+        ),
+        repeating-linear-gradient(
+            90deg,
+            transparent,
+            transparent 2px,
+            rgba(255, 107, 157, 0.02) 2px,
+            rgba(255, 107, 157, 0.02) 4px
+        );
+    animation: hologram-interference 8s linear infinite;
+}
+
+@keyframes hologram-interference {
+    0% { transform: translateX(0) translateY(0); opacity: 0.3; }
+    25% { transform: translateX(2px) translateY(1px); opacity: 0.5; }
+    50% { transform: translateX(-1px) translateY(-2px); opacity: 0.4; }
+    75% { transform: translateX(1px) translateY(2px); opacity: 0.6; }
+    100% { transform: translateX(0) translateY(0); opacity: 0.3; }
+}
+
+.holographic-particle {
+    position: fixed;
+    width: 4px;
+    height: 4px;
+    background: var(--primary-color);
+    border-radius: 50%;
+    z-index: 9998;
+    pointer-events: none;
+    animation: holographic-particle-float 4s ease-in-out infinite;
+    box-shadow: 0 0 10px var(--primary-color);
+}
+
+.holographic-particle:nth-child(odd) {
+    background: var(--secondary-color);
+    box-shadow: 0 0 10px var(--secondary-color);
+    animation-duration: 6s;
+}
+
+.holographic-particle:nth-child(3n) {
+    background: var(--accent-color);
+    box-shadow: 0 0 10px var(--accent-color);
+    animation-duration: 5s;
+}
+
+@keyframes holographic-particle-float {
+    0%, 100% { 
+        transform: translateY(0) scale(1); 
+        opacity: 0.6; 
+    }
+    25% { 
+        transform: translateY(-20px) scale(1.2); 
+        opacity: 1; 
+    }
+    50% { 
+        transform: translateY(-10px) scale(0.8); 
+        opacity: 0.8; 
+    }
+    75% { 
+        transform: translateY(-30px) scale(1.1); 
+        opacity: 0.9; 
+    }
+}
+
+/* MATRIX MODE EFFECTS */
+.matrix-mode-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10000;
+    background: rgba(0, 0, 0, 0.95);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: matrix-fade-in 0.5s ease-out;
+}
+
+@keyframes matrix-fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.matrix-terminal {
+    width: 80%;
+    max-width: 800px;
+    height: 60%;
+    background: #000000;
+    border: 2px solid #00FF41;
+    border-radius: 10px;
+    box-shadow: 
+        0 0 50px rgba(0, 255, 65, 0.3),
+        inset 0 0 20px rgba(0, 255, 65, 0.1);
+    display: flex;
+    flex-direction: column;
+    animation: matrix-terminal-glow 2s ease-in-out infinite;
+}
+
+@keyframes matrix-terminal-glow {
+    0%, 100% { box-shadow: 0 0 50px rgba(0, 255, 65, 0.3), inset 0 0 20px rgba(0, 255, 65, 0.1); }
+    50% { box-shadow: 0 0 70px rgba(0, 255, 65, 0.5), inset 0 0 30px rgba(0, 255, 65, 0.2); }
+}
+
+.terminal-header {
+    background: #00FF41;
+    color: #000000;
+    padding: 10px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: bold;
+}
+
+.terminal-close {
+    background: none;
+    border: none;
+    color: #000000;
+    font-size: 1.5rem;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.terminal-content {
+    flex: 1;
+    padding: 20px;
+    font-family: 'JetBrains Mono', monospace;
+    color: #00FF41;
+    background: #000000;
+    overflow-y: auto;
+    line-height: 1.4;
+}
+
+.terminal-line {
+    margin-bottom: 5px;
+    animation: terminal-line-appear 0.5s ease-out;
+}
+
+@keyframes terminal-line-appear {
+    from { opacity: 0; transform: translateX(-10px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+.prompt {
+    color: #00FFFF;
+}
+
+.typing-cursor {
+    animation: cursor-blink 1s infinite;
+}
+
+@keyframes cursor-blink {
+    0%, 50% { opacity: 1; }
+    51%, 100% { opacity: 0; }
+}
+
+/* NEURAL VISUALIZATION */
+.neural-viz-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10000;
+    background: rgba(0, 0, 0, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: neural-viz-fade-in 0.5s ease-out;
+}
+
+@keyframes neural-viz-fade-in {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+.neural-visualization {
+    background: linear-gradient(135deg, 
+        rgba(16, 16, 32, 0.95) 0%, 
+        rgba(0, 0, 0, 0.95) 100%);
+    border: 2px solid rgba(0, 212, 255, 0.4);
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 
+        0 20px 60px rgba(0, 0, 0, 0.5),
+        0 0 40px rgba(0, 212, 255, 0.3);
+    animation: neural-viz-pulse 3s ease-in-out infinite;
+}
+
+@keyframes neural-viz-pulse {
+    0%, 100% { 
+        box-shadow: 
+            0 20px 60px rgba(0, 0, 0, 0.5),
+            0 0 40px rgba(0, 212, 255, 0.3);
+    }
+    50% { 
+        box-shadow: 
+            0 25px 70px rgba(0, 0, 0, 0.6),
+            0 0 60px rgba(0, 212, 255, 0.5);
+    }
+}
+
+.viz-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    color: #FFFFFF;
+}
+
+.viz-header h3 {
+    margin: 0;
+    font-size: 1.4rem;
+}
+
+.close-btn {
+    background: rgba(255, 0, 0, 0.2);
+    border: 1px solid rgba(255, 0, 0, 0.5);
+    color: #FFFFFF;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.close-btn:hover {
+    background: rgba(255, 0, 0, 0.4);
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.3);
+}
+
+#neural-viz-canvas {
+    border: 1px solid rgba(0, 212, 255, 0.3);
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.5);
+    display: block;
+    margin: 0 auto;
+}
+
+.viz-controls {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.viz-controls button {
+    padding: 8px 16px;
+    background: linear-gradient(135deg, 
+        rgba(0, 212, 255, 0.2) 0%, 
+        rgba(255, 107, 157, 0.1) 100%);
+    color: var(--primary-color);
+    border: 1px solid rgba(0, 212, 255, 0.3);
+    border-radius: 8px;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.viz-controls button:hover {
+    background: linear-gradient(135deg, 
+        rgba(0, 212, 255, 0.3) 0%, 
+        rgba(255, 107, 157, 0.2) 100%);
+    color: #FFFFFF;
+    box-shadow: 0 3px 15px rgba(0, 212, 255, 0.2);
+}
+
+/* QUANTUM FIELD CANVAS */
+#quantum-field {
+    transition: opacity 1s ease;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+    .futuristic-controls {
+        right: 10px;
+        top: 80px;
+        max-width: 200px;
+    }
+    
+    .control-panel {
+        padding: 12px;
+    }
+    
+    .futuristic-btn {
+        padding: 8px 10px;
+        font-size: 0.75rem;
+    }
+    
+    .matrix-terminal {
+        width: 95%;
+        height: 70%;
+    }
+    
+    .neural-visualization {
+        width: 95%;
+        padding: 15px;
+    }
+    
+    #neural-viz-canvas {
+        width: 100%;
+        height: auto;
+    }
+    
+    .viz-controls {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .futuristic-controls {
+        position: relative;
+        right: auto;
+        top: auto;
+        max-width: 100%;
+        margin: 20px;
+    }
+    
+    .control-buttons {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 5px;
+    }
+    
+    .futuristic-btn {
+        flex: 1;
+        min-width: 120px;
+    }
+    
+    .terminal-content {
+        padding: 15px;
+        font-size: 0.8rem;
+    }
+    
+    .matrix-terminal {
+        height: 80%;
+    }
+}
